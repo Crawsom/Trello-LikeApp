@@ -17,7 +17,6 @@ namespace Trello_LikeApp
         {
             InitializeComponent();
             timer1.Start();
-
         }
 
         private void save_button_Click(object sender, EventArgs e)
@@ -32,13 +31,17 @@ namespace Trello_LikeApp
             Clock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        // Loads 
+        // 
         private void loadForm(object sender, EventArgs e)
         {
             LoadEmployees load = new LoadEmployees();
             foreach (var item in load.Load())
             {
                 bxEmployeers.Items.Add(item);
+            }
+            foreach (var item in load.Load())
+            {
+                lstBoxEmployees.Items.Add(item);
             }
         }
 
@@ -72,6 +75,26 @@ namespace Trello_LikeApp
             Employees employee = new Employees(TxtBxEmployeeName.Text,
                 TxtBxEmployeeSurname.Text);
             employee.Save();
+        }
+
+        // Refresh the employees page so you can see the new employee in 
+        // employee list box
+        private void refreshForm()
+        {
+            LoadEmployees load = new LoadEmployees();
+            foreach (var item in load.Load())
+            {
+                lstBoxEmployees.Items.Clear();
+            }
+            foreach (var item in load.Load())
+            {
+                lstBoxEmployees.Items.Add(item);
+            }
+        }
+
+        private void RefreshButtn(object sender, EventArgs e)
+        {
+            refreshForm();
         }
     }
 }
