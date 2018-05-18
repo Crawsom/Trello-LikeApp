@@ -37,7 +37,7 @@
             this.EndTimeDate = new System.Windows.Forms.DateTimePicker();
             this.label4 = new System.Windows.Forms.Label();
             this.StartTimeDate = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
+            this.save_button = new System.Windows.Forms.Button();
             this.ShortDescTextBx = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ProjectManagerTextBx = new System.Windows.Forms.TextBox();
@@ -45,6 +45,9 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ProjectNameTextBx = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.btnSubTasks = new System.Windows.Forms.Button();
+            this.lblProjects = new System.Windows.Forms.Label();
+            this.lstBxProjects = new System.Windows.Forms.CheckedListBox();
             this.bxEmployeers = new System.Windows.Forms.ComboBox();
             this.txtSTDescription = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -52,24 +55,32 @@
             this.SbTaskName = new System.Windows.Forms.Label();
             this.txtSTName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.Employee = new System.Windows.Forms.TabPage();
             this.Clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.lstBxProjects = new System.Windows.Forms.CheckedListBox();
-            this.lblProjects = new System.Windows.Forms.Label();
-            this.btnSubTasks = new System.Windows.Forms.Button();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabRegisterEmployee = new System.Windows.Forms.TabPage();
+            this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.TxtBxEmployeeSurname = new System.Windows.Forms.TextBox();
+            this.TxtBxEmployeeName = new System.Windows.Forms.TextBox();
+            this.EmployeeSurname = new System.Windows.Forms.Label();
+            this.EmployeeName = new System.Windows.Forms.Label();
+            this.SaveEmployeeButton = new System.Windows.Forms.Button();
             this.TbCntrl.SuspendLayout();
             this.AddJbTB.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.Employee.SuspendLayout();
+            this.tabControl2.SuspendLayout();
+            this.tabRegisterEmployee.SuspendLayout();
             this.SuspendLayout();
             // 
             // TbCntrl
             // 
             this.TbCntrl.Controls.Add(this.AddJbTB);
             this.TbCntrl.Controls.Add(this.tabPage2);
-            this.TbCntrl.Controls.Add(this.tabPage3);
+            this.TbCntrl.Controls.Add(this.Employee);
             this.TbCntrl.Location = new System.Drawing.Point(2, 12);
             this.TbCntrl.Name = "TbCntrl";
             this.TbCntrl.SelectedIndex = 0;
@@ -104,7 +115,7 @@
             this.tabPage1.Controls.Add(this.EndTimeDate);
             this.tabPage1.Controls.Add(this.label4);
             this.tabPage1.Controls.Add(this.StartTimeDate);
-            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.save_button);
             this.tabPage1.Controls.Add(this.ShortDescTextBx);
             this.tabPage1.Controls.Add(this.label3);
             this.tabPage1.Controls.Add(this.ProjectManagerTextBx);
@@ -151,15 +162,15 @@
             this.StartTimeDate.Size = new System.Drawing.Size(214, 20);
             this.StartTimeDate.TabIndex = 14;
             // 
-            // button1
+            // save_button
             // 
-            this.button1.Location = new System.Drawing.Point(377, 315);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Save";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.save_button.Location = new System.Drawing.Point(377, 315);
+            this.save_button.Name = "save_button";
+            this.save_button.Size = new System.Drawing.Size(75, 23);
+            this.save_button.TabIndex = 13;
+            this.save_button.Text = "Save";
+            this.save_button.UseVisualStyleBackColor = true;
+            this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // ShortDescTextBx
             // 
@@ -228,6 +239,33 @@
             this.tabPage4.Text = "Add Sub Tasks";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // btnSubTasks
+            // 
+            this.btnSubTasks.Location = new System.Drawing.Point(377, 315);
+            this.btnSubTasks.Name = "btnSubTasks";
+            this.btnSubTasks.Size = new System.Drawing.Size(75, 23);
+            this.btnSubTasks.TabIndex = 22;
+            this.btnSubTasks.Text = "Save";
+            this.btnSubTasks.UseVisualStyleBackColor = true;
+            this.btnSubTasks.Click += new System.EventHandler(this.SaveSubTasks);
+            // 
+            // lblProjects
+            // 
+            this.lblProjects.AutoSize = true;
+            this.lblProjects.Location = new System.Drawing.Point(76, 88);
+            this.lblProjects.Name = "lblProjects";
+            this.lblProjects.Size = new System.Drawing.Size(45, 13);
+            this.lblProjects.TabIndex = 21;
+            this.lblProjects.Text = "Projects";
+            // 
+            // lstBxProjects
+            // 
+            this.lstBxProjects.FormattingEnabled = true;
+            this.lstBxProjects.Location = new System.Drawing.Point(33, 116);
+            this.lstBxProjects.Name = "lstBxProjects";
+            this.lstBxProjects.Size = new System.Drawing.Size(120, 94);
+            this.lstBxProjects.TabIndex = 20;
+            // 
             // bxEmployeers
             // 
             this.bxEmployeers.FormattingEnabled = true;
@@ -287,15 +325,16 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
-            // tabPage3
+            // Employee
             // 
-            this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage3.Size = new System.Drawing.Size(470, 380);
-            this.tabPage3.TabIndex = 2;
-            this.tabPage3.Text = "tabPage3";
-            this.tabPage3.UseVisualStyleBackColor = true;
+            this.Employee.Controls.Add(this.tabControl2);
+            this.Employee.Location = new System.Drawing.Point(4, 22);
+            this.Employee.Name = "Employee";
+            this.Employee.Padding = new System.Windows.Forms.Padding(3);
+            this.Employee.Size = new System.Drawing.Size(470, 380);
+            this.Employee.TabIndex = 2;
+            this.Employee.Text = "Employees";
+            this.Employee.UseVisualStyleBackColor = true;
             // 
             // Clock
             // 
@@ -310,32 +349,82 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer);
             // 
-            // lstBxProjects
+            // tabControl2
             // 
-            this.lstBxProjects.FormattingEnabled = true;
-            this.lstBxProjects.Location = new System.Drawing.Point(33, 116);
-            this.lstBxProjects.Name = "lstBxProjects";
-            this.lstBxProjects.Size = new System.Drawing.Size(120, 94);
-            this.lstBxProjects.TabIndex = 20;
+            this.tabControl2.Controls.Add(this.tabRegisterEmployee);
+            this.tabControl2.Controls.Add(this.tabPage5);
+            this.tabControl2.Location = new System.Drawing.Point(-4, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(478, 406);
+            this.tabControl2.TabIndex = 0;
             // 
-            // lblProjects
+            // tabRegisterEmployee
             // 
-            this.lblProjects.AutoSize = true;
-            this.lblProjects.Location = new System.Drawing.Point(76, 88);
-            this.lblProjects.Name = "lblProjects";
-            this.lblProjects.Size = new System.Drawing.Size(45, 13);
-            this.lblProjects.TabIndex = 21;
-            this.lblProjects.Text = "Projects";
+            this.tabRegisterEmployee.Controls.Add(this.SaveEmployeeButton);
+            this.tabRegisterEmployee.Controls.Add(this.TxtBxEmployeeSurname);
+            this.tabRegisterEmployee.Controls.Add(this.TxtBxEmployeeName);
+            this.tabRegisterEmployee.Controls.Add(this.EmployeeSurname);
+            this.tabRegisterEmployee.Controls.Add(this.EmployeeName);
+            this.tabRegisterEmployee.Location = new System.Drawing.Point(4, 22);
+            this.tabRegisterEmployee.Name = "tabRegisterEmployee";
+            this.tabRegisterEmployee.Padding = new System.Windows.Forms.Padding(3);
+            this.tabRegisterEmployee.Size = new System.Drawing.Size(470, 380);
+            this.tabRegisterEmployee.TabIndex = 0;
+            this.tabRegisterEmployee.Text = "Register Employee";
+            this.tabRegisterEmployee.UseVisualStyleBackColor = true;
             // 
-            // btnSubTasks
+            // tabPage5
             // 
-            this.btnSubTasks.Location = new System.Drawing.Point(351, 312);
-            this.btnSubTasks.Name = "btnSubTasks";
-            this.btnSubTasks.Size = new System.Drawing.Size(75, 23);
-            this.btnSubTasks.TabIndex = 22;
-            this.btnSubTasks.Text = "Save";
-            this.btnSubTasks.UseVisualStyleBackColor = true;
-            this.btnSubTasks.Click += new System.EventHandler(this.SaveSubTasks);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
+            this.tabPage5.Name = "tabPage5";
+            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage5.Size = new System.Drawing.Size(192, 74);
+            this.tabPage5.TabIndex = 1;
+            this.tabPage5.Text = "tabPage5";
+            this.tabPage5.UseVisualStyleBackColor = true;
+            // 
+            // TxtBxEmployeeSurname
+            // 
+            this.TxtBxEmployeeSurname.Location = new System.Drawing.Point(231, 108);
+            this.TxtBxEmployeeSurname.Name = "TxtBxEmployeeSurname";
+            this.TxtBxEmployeeSurname.Size = new System.Drawing.Size(100, 20);
+            this.TxtBxEmployeeSurname.TabIndex = 10;
+            // 
+            // TxtBxEmployeeName
+            // 
+            this.TxtBxEmployeeName.Location = new System.Drawing.Point(231, 70);
+            this.TxtBxEmployeeName.Name = "TxtBxEmployeeName";
+            this.TxtBxEmployeeName.Size = new System.Drawing.Size(100, 20);
+            this.TxtBxEmployeeName.TabIndex = 9;
+            // 
+            // EmployeeSurname
+            // 
+            this.EmployeeSurname.AutoSize = true;
+            this.EmployeeSurname.Location = new System.Drawing.Point(123, 108);
+            this.EmployeeSurname.Name = "EmployeeSurname";
+            this.EmployeeSurname.Size = new System.Drawing.Size(101, 13);
+            this.EmployeeSurname.TabIndex = 7;
+            this.EmployeeSurname.Text = "Employee Surname:";
+            // 
+            // EmployeeName
+            // 
+            this.EmployeeName.AutoSize = true;
+            this.EmployeeName.Location = new System.Drawing.Point(137, 70);
+            this.EmployeeName.Name = "EmployeeName";
+            this.EmployeeName.Size = new System.Drawing.Size(87, 13);
+            this.EmployeeName.TabIndex = 6;
+            this.EmployeeName.Text = "Employee Name:";
+            // 
+            // SaveEmployeeButton
+            // 
+            this.SaveEmployeeButton.Location = new System.Drawing.Point(377, 315);
+            this.SaveEmployeeButton.Name = "SaveEmployeeButton";
+            this.SaveEmployeeButton.Size = new System.Drawing.Size(75, 23);
+            this.SaveEmployeeButton.TabIndex = 12;
+            this.SaveEmployeeButton.Text = "Save";
+            this.SaveEmployeeButton.UseVisualStyleBackColor = true;
+            this.SaveEmployeeButton.Click += new System.EventHandler(this.SaveEmployees);
             // 
             // Form1
             // 
@@ -354,6 +443,10 @@
             this.tabPage1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.Employee.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
+            this.tabRegisterEmployee.ResumeLayout(false);
+            this.tabRegisterEmployee.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -364,7 +457,7 @@
         private System.Windows.Forms.TabControl TbCntrl;
         private System.Windows.Forms.TabPage AddJbTB;
         private System.Windows.Forms.TabPage tabPage2;
-        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.TabPage Employee;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TextBox ShortDescTextBx;
@@ -374,7 +467,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox ProjectNameTextBx;
         private System.Windows.Forms.TabPage tabPage4;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button save_button;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker EndTimeDate;
         private System.Windows.Forms.Label label4;
@@ -392,6 +485,14 @@
         private System.Windows.Forms.Label lblProjects;
         private System.Windows.Forms.CheckedListBox lstBxProjects;
         private System.Windows.Forms.Button btnSubTasks;
+        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabPage tabRegisterEmployee;
+        private System.Windows.Forms.TextBox TxtBxEmployeeSurname;
+        private System.Windows.Forms.TextBox TxtBxEmployeeName;
+        private System.Windows.Forms.Label EmployeeSurname;
+        private System.Windows.Forms.Label EmployeeName;
+        private System.Windows.Forms.TabPage tabPage5;
+        private System.Windows.Forms.Button SaveEmployeeButton;
     }
 }
 

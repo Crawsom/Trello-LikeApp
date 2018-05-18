@@ -37,7 +37,7 @@ namespace Trello_LikeApp
         {
             StreamWriter writer;
 
-            writer = File.AppendText("file");
+            writer = File.AppendText(projectFile);
             String st = new String('-', 4);
             writer.WriteLine(st + s.name);
             writer.WriteLine(st + s.employeer);

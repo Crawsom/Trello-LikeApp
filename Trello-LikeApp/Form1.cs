@@ -20,7 +20,7 @@ namespace Trello_LikeApp
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void save_button_Click(object sender, EventArgs e)
         {
             SaveCreatedProject s = new SaveCreatedProject(ProjectNameTextBx,
              ProjectManagerTextBx,  ShortDescTextBx, StartTimeDate, EndTimeDate);
@@ -58,14 +58,20 @@ namespace Trello_LikeApp
                 SubTasks subtasks = new SubTasks(txtSTName.Text, bxEmployeers.Text,
                     txtSTDescription.Text);
 
-                // NOT WORK - GET STRING FOR LISTBOX FOR FUNCTION
                 foreach (var st in lstBxProjects.CheckedItems)
                     subtasks.TrySave(st.ToString(), subtasks);
 
                 MessageBox.Show("Save!");
             }
             else
-                MessageBox.Show("Error.");
+                MessageBox.Show("You must select a project.");
+        }
+
+        private void SaveEmployees(object sender, EventArgs e)
+        {
+            Employees employee = new Employees(TxtBxEmployeeName.Text,
+                TxtBxEmployeeSurname.Text);
+            employee.Save();
         }
     }
 }
