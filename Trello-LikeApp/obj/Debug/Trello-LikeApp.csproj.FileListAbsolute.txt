@@ -1,0 +1,10 @@
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\bin\Debug\Trello-LikeApp.exe.config
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\bin\Debug\Trello-LikeApp.exe
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\bin\Debug\Trello-LikeApp.pdb
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello-LikeApp.csprojResolveAssemblyReference.cache
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello_LikeApp.Form1.resources
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello_LikeApp.Properties.Resources.resources
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello-LikeApp.csproj.GenerateResource.Cache
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello-LikeApp.csproj.CoreCompileInputs.cache
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello-LikeApp.exe
+C:\Users\Craw\Desktop\Visual Studio & Java\Visual Studio\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello-LikeApp.pdb
