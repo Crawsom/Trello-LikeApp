@@ -56,27 +56,26 @@
             this.txtSTName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.Employee = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
-            this.tabRegisterEmployee = new System.Windows.Forms.TabPage();
-            this.Refresh_button = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.lstBoxEmployees = new System.Windows.Forms.ListBox();
-            this.SaveEmployeeButton = new System.Windows.Forms.Button();
-            this.TxtBxEmployeeSurname = new System.Windows.Forms.TextBox();
-            this.TxtBxEmployeeName = new System.Windows.Forms.TextBox();
-            this.EmployeeSurname = new System.Windows.Forms.Label();
-            this.EmployeeName = new System.Windows.Forms.Label();
-            this.tabPage5 = new System.Windows.Forms.TabPage();
             this.Clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.tabRegisterEmployee = new System.Windows.Forms.TabPage();
+            this.EmployeeName = new System.Windows.Forms.Label();
+            this.EmployeeSurname = new System.Windows.Forms.Label();
+            this.TxtBxEmployeeName = new System.Windows.Forms.TextBox();
+            this.TxtBxEmployeeSurname = new System.Windows.Forms.TextBox();
+            this.SaveEmployeeButton = new System.Windows.Forms.Button();
+            this.lstBoxEmployees = new System.Windows.Forms.ListBox();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Refresh_button = new System.Windows.Forms.Button();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
             this.TbCntrl.SuspendLayout();
             this.AddJbTB.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             this.Employee.SuspendLayout();
-            this.tabControl2.SuspendLayout();
             this.tabRegisterEmployee.SuspendLayout();
+            this.tabControl2.SuspendLayout();
             this.SuspendLayout();
             // 
             // TbCntrl
@@ -268,6 +267,7 @@
             this.lstBxProjects.Name = "lstBxProjects";
             this.lstBxProjects.Size = new System.Drawing.Size(177, 109);
             this.lstBxProjects.TabIndex = 20;
+            this.lstBxProjects.SelectedIndexChanged += new System.EventHandler(this.lstBxProjects_SelectedIndexChanged);
             // 
             // bxEmployeers
             // 
@@ -339,15 +339,18 @@
             this.Employee.Text = "Employees";
             this.Employee.UseVisualStyleBackColor = true;
             // 
-            // tabControl2
+            // Clock
             // 
-            this.tabControl2.Controls.Add(this.tabRegisterEmployee);
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Location = new System.Drawing.Point(-4, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(478, 406);
-            this.tabControl2.TabIndex = 0;
+            this.Clock.AutoSize = true;
+            this.Clock.Location = new System.Drawing.Point(432, 9);
+            this.Clock.Name = "Clock";
+            this.Clock.Size = new System.Drawing.Size(0, 13);
+            this.Clock.TabIndex = 18;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer);
             // 
             // tabRegisterEmployee
             // 
@@ -367,32 +370,37 @@
             this.tabRegisterEmployee.Text = "Register Employee";
             this.tabRegisterEmployee.UseVisualStyleBackColor = true;
             // 
-            // Refresh_button
+            // EmployeeName
             // 
-            this.Refresh_button.Location = new System.Drawing.Point(10, 315);
-            this.Refresh_button.Name = "Refresh_button";
-            this.Refresh_button.Size = new System.Drawing.Size(75, 23);
-            this.Refresh_button.TabIndex = 24;
-            this.Refresh_button.Text = "Refresh";
-            this.Refresh_button.UseVisualStyleBackColor = true;
-            this.Refresh_button.Click += new System.EventHandler(this.RefreshButtn);
+            this.EmployeeName.AutoSize = true;
+            this.EmployeeName.Location = new System.Drawing.Point(134, 45);
+            this.EmployeeName.Name = "EmployeeName";
+            this.EmployeeName.Size = new System.Drawing.Size(87, 13);
+            this.EmployeeName.TabIndex = 6;
+            this.EmployeeName.Text = "Employee Name:";
             // 
-            // label8
+            // EmployeeSurname
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 123);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Employees";
+            this.EmployeeSurname.AutoSize = true;
+            this.EmployeeSurname.Location = new System.Drawing.Point(120, 83);
+            this.EmployeeSurname.Name = "EmployeeSurname";
+            this.EmployeeSurname.Size = new System.Drawing.Size(101, 13);
+            this.EmployeeSurname.TabIndex = 7;
+            this.EmployeeSurname.Text = "Employee Surname:";
             // 
-            // lstBoxEmployees
+            // TxtBxEmployeeName
             // 
-            this.lstBoxEmployees.FormattingEnabled = true;
-            this.lstBoxEmployees.Location = new System.Drawing.Point(7, 142);
-            this.lstBoxEmployees.Name = "lstBoxEmployees";
-            this.lstBoxEmployees.Size = new System.Drawing.Size(457, 95);
-            this.lstBoxEmployees.TabIndex = 13;
+            this.TxtBxEmployeeName.Location = new System.Drawing.Point(228, 45);
+            this.TxtBxEmployeeName.Name = "TxtBxEmployeeName";
+            this.TxtBxEmployeeName.Size = new System.Drawing.Size(100, 20);
+            this.TxtBxEmployeeName.TabIndex = 9;
+            // 
+            // TxtBxEmployeeSurname
+            // 
+            this.TxtBxEmployeeSurname.Location = new System.Drawing.Point(228, 83);
+            this.TxtBxEmployeeSurname.Name = "TxtBxEmployeeSurname";
+            this.TxtBxEmployeeSurname.Size = new System.Drawing.Size(100, 20);
+            this.TxtBxEmployeeSurname.TabIndex = 10;
             // 
             // SaveEmployeeButton
             // 
@@ -404,60 +412,41 @@
             this.SaveEmployeeButton.UseVisualStyleBackColor = true;
             this.SaveEmployeeButton.Click += new System.EventHandler(this.SaveEmployees);
             // 
-            // TxtBxEmployeeSurname
+            // lstBoxEmployees
             // 
-            this.TxtBxEmployeeSurname.Location = new System.Drawing.Point(228, 83);
-            this.TxtBxEmployeeSurname.Name = "TxtBxEmployeeSurname";
-            this.TxtBxEmployeeSurname.Size = new System.Drawing.Size(100, 20);
-            this.TxtBxEmployeeSurname.TabIndex = 10;
+            this.lstBoxEmployees.FormattingEnabled = true;
+            this.lstBoxEmployees.Location = new System.Drawing.Point(7, 142);
+            this.lstBoxEmployees.Name = "lstBoxEmployees";
+            this.lstBoxEmployees.Size = new System.Drawing.Size(457, 95);
+            this.lstBoxEmployees.TabIndex = 13;
             // 
-            // TxtBxEmployeeName
+            // label8
             // 
-            this.TxtBxEmployeeName.Location = new System.Drawing.Point(228, 45);
-            this.TxtBxEmployeeName.Name = "TxtBxEmployeeName";
-            this.TxtBxEmployeeName.Size = new System.Drawing.Size(100, 20);
-            this.TxtBxEmployeeName.TabIndex = 9;
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 123);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Employees";
             // 
-            // EmployeeSurname
+            // Refresh_button
             // 
-            this.EmployeeSurname.AutoSize = true;
-            this.EmployeeSurname.Location = new System.Drawing.Point(120, 83);
-            this.EmployeeSurname.Name = "EmployeeSurname";
-            this.EmployeeSurname.Size = new System.Drawing.Size(101, 13);
-            this.EmployeeSurname.TabIndex = 7;
-            this.EmployeeSurname.Text = "Employee Surname:";
+            this.Refresh_button.Location = new System.Drawing.Point(10, 315);
+            this.Refresh_button.Name = "Refresh_button";
+            this.Refresh_button.Size = new System.Drawing.Size(75, 23);
+            this.Refresh_button.TabIndex = 24;
+            this.Refresh_button.Text = "Refresh";
+            this.Refresh_button.UseVisualStyleBackColor = true;
+            this.Refresh_button.Click += new System.EventHandler(this.RefreshButtn);
             // 
-            // EmployeeName
+            // tabControl2
             // 
-            this.EmployeeName.AutoSize = true;
-            this.EmployeeName.Location = new System.Drawing.Point(134, 45);
-            this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.Size = new System.Drawing.Size(87, 13);
-            this.EmployeeName.TabIndex = 6;
-            this.EmployeeName.Text = "Employee Name:";
-            // 
-            // tabPage5
-            // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 22);
-            this.tabPage5.Name = "tabPage5";
-            this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(470, 380);
-            this.tabPage5.TabIndex = 1;
-            this.tabPage5.Text = "tabPage5";
-            this.tabPage5.UseVisualStyleBackColor = true;
-            // 
-            // Clock
-            // 
-            this.Clock.AutoSize = true;
-            this.Clock.Location = new System.Drawing.Point(432, 9);
-            this.Clock.Name = "Clock";
-            this.Clock.Size = new System.Drawing.Size(0, 13);
-            this.Clock.TabIndex = 18;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.Timer);
+            this.tabControl2.Controls.Add(this.tabRegisterEmployee);
+            this.tabControl2.Location = new System.Drawing.Point(-4, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(478, 406);
+            this.tabControl2.TabIndex = 0;
             // 
             // Form1
             // 
@@ -477,9 +466,9 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.Employee.ResumeLayout(false);
-            this.tabControl2.ResumeLayout(false);
             this.tabRegisterEmployee.ResumeLayout(false);
             this.tabRegisterEmployee.PerformLayout();
+            this.tabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -520,15 +509,14 @@
         private System.Windows.Forms.Button btnSubTasks;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabRegisterEmployee;
+        private System.Windows.Forms.Button Refresh_button;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.ListBox lstBoxEmployees;
+        private System.Windows.Forms.Button SaveEmployeeButton;
         private System.Windows.Forms.TextBox TxtBxEmployeeSurname;
         private System.Windows.Forms.TextBox TxtBxEmployeeName;
         private System.Windows.Forms.Label EmployeeSurname;
         private System.Windows.Forms.Label EmployeeName;
-        private System.Windows.Forms.TabPage tabPage5;
-        private System.Windows.Forms.Button SaveEmployeeButton;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.ListBox lstBoxEmployees;
-        private System.Windows.Forms.Button Refresh_button;
     }
 }
 

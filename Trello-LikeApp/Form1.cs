@@ -47,9 +47,11 @@ namespace Trello_LikeApp
 
         private void ProjectsLoad(object sender, EventArgs e)
         {
+            lstBxProjects.Items.Clear();
             string[] listFiles = Directory.GetFiles(".", "*.tla");
             foreach (string lf in listFiles)
                 lstBxProjects.Items.Add(lf);
+
         }
 
         private void SaveSubTasks(object sender, EventArgs e)
@@ -68,6 +70,7 @@ namespace Trello_LikeApp
             }
             else
                 MessageBox.Show("You must select a project.");
+
         }
 
         private void SaveEmployees(object sender, EventArgs e)
@@ -77,15 +80,12 @@ namespace Trello_LikeApp
             employee.Save();
         }
 
-        // Refresh the employees page so you can see the new employee in 
-        // employee list box
+        /*. Refresh the employees page so you can see the new employee in 
+          . employee list box*/
         private void refreshForm()
         {
             LoadEmployees load = new LoadEmployees();
-            foreach (var item in load.Load())
-            {
-                lstBoxEmployees.Items.Clear();
-            }
+            lstBoxEmployees.Items.Clear();
             foreach (var item in load.Load())
             {
                 lstBoxEmployees.Items.Add(item);
@@ -95,6 +95,12 @@ namespace Trello_LikeApp
         private void RefreshButtn(object sender, EventArgs e)
         {
             refreshForm();
+        }
+
+        private void lstBxProjects_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Changes the selection mode from double-click to single click.
+            lstBxProjects.CheckOnClick = true;
         }
     }
 }
