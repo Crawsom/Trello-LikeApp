@@ -6,7 +6,6 @@ namespace Trello_LikeApp
 {
     class SaveCreatedProject 
     {
-        private int c;
         private TextBox projectNameTextBx;
         private TextBox projectManagerTextBx;
         private TextBox shortDescTextBx;
@@ -35,15 +34,14 @@ namespace Trello_LikeApp
             string[] shortDescription = shortDescTextBx.ToString().Split(' ');
             string[] startDate = startTimeDate.ToString().Split(' ');
             string[] endDate = endTimeDate.ToString().Split(' ');
-            StreamWriter w = new StreamWriter("project" +
-                DateTime.Now.ToString("yyyy-MM-dd") + "-N" + (c + 1) + ".tla");
+            StreamWriter w = new StreamWriter(projectNameTextBx.Text + "_" +
+                DateTime.Now.ToString("yyyy-MM-dd") + ".tla");
             w.WriteLine("Project Name: " + projectName[2]);
             w.WriteLine("Project Manager: " + projectManager[2]);
             w.WriteLine("Short Description: " + shortDescription[2]);
             w.WriteLine("Start Date: " + startDate[2]);
             w.WriteLine("End Date: " + endDate[2]);
             w.Close();
-            c++;
             result = MessageBox.Show(message);
         }
     }

@@ -22,7 +22,8 @@ namespace Trello_LikeApp
         private void save_button_Click(object sender, EventArgs e)
         {
             SaveCreatedProject s = new SaveCreatedProject(ProjectNameTextBx,
-             ProjectManagerTextBx,  ShortDescTextBx, StartTimeDate, EndTimeDate);
+             ProjectManagerTextBx,  ShortDescTextBx, StartTimeDate,
+             EndTimeDate);
             s.Save();
         }
 
@@ -31,7 +32,6 @@ namespace Trello_LikeApp
             Clock.Text = DateTime.Now.ToString("HH:mm:ss");
         }
 
-        // 
         private void loadForm(object sender, EventArgs e)
         {
             LoadEmployees load = new LoadEmployees();
@@ -43,6 +43,9 @@ namespace Trello_LikeApp
             {
                 lstBoxEmployees.Items.Add(item);
             }
+            //Adds the deadlines of projects to the Calendar tab
+            SeeDeadLines deadLine = new SeeDeadLines(DeadLinesCalendar);
+            deadLine.DeadLines();
         }
 
         private void ProjectsLoad(object sender, EventArgs e)

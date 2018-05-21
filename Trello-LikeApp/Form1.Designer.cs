@@ -54,34 +54,37 @@
             this.label7 = new System.Windows.Forms.Label();
             this.SbTaskName = new System.Windows.Forms.Label();
             this.txtSTName = new System.Windows.Forms.TextBox();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.DeadLinesTab = new System.Windows.Forms.TabPage();
+            this.DeadLinesCalendar = new System.Windows.Forms.MonthCalendar();
             this.Employee = new System.Windows.Forms.TabPage();
+            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tabRegisterEmployee = new System.Windows.Forms.TabPage();
+            this.Refresh_button = new System.Windows.Forms.Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.lstBoxEmployees = new System.Windows.Forms.ListBox();
+            this.SaveEmployeeButton = new System.Windows.Forms.Button();
+            this.TxtBxEmployeeSurname = new System.Windows.Forms.TextBox();
+            this.TxtBxEmployeeName = new System.Windows.Forms.TextBox();
+            this.EmployeeSurname = new System.Windows.Forms.Label();
+            this.EmployeeName = new System.Windows.Forms.Label();
             this.Clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.tabRegisterEmployee = new System.Windows.Forms.TabPage();
-            this.EmployeeName = new System.Windows.Forms.Label();
-            this.EmployeeSurname = new System.Windows.Forms.Label();
-            this.TxtBxEmployeeName = new System.Windows.Forms.TextBox();
-            this.TxtBxEmployeeSurname = new System.Windows.Forms.TextBox();
-            this.SaveEmployeeButton = new System.Windows.Forms.Button();
-            this.lstBoxEmployees = new System.Windows.Forms.ListBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.Refresh_button = new System.Windows.Forms.Button();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.button1 = new System.Windows.Forms.Button();
             this.TbCntrl.SuspendLayout();
             this.AddJbTB.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.DeadLinesTab.SuspendLayout();
             this.Employee.SuspendLayout();
-            this.tabRegisterEmployee.SuspendLayout();
             this.tabControl2.SuspendLayout();
+            this.tabRegisterEmployee.SuspendLayout();
             this.SuspendLayout();
             // 
             // TbCntrl
             // 
             this.TbCntrl.Controls.Add(this.AddJbTB);
-            this.TbCntrl.Controls.Add(this.tabPage2);
+            this.TbCntrl.Controls.Add(this.DeadLinesTab);
             this.TbCntrl.Controls.Add(this.Employee);
             this.TbCntrl.Location = new System.Drawing.Point(2, 12);
             this.TbCntrl.Name = "TbCntrl";
@@ -318,15 +321,24 @@
             this.txtSTName.Size = new System.Drawing.Size(121, 20);
             this.txtSTName.TabIndex = 13;
             // 
-            // tabPage2
+            // DeadLinesTab
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(470, 380);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
+            this.DeadLinesTab.Controls.Add(this.button1);
+            this.DeadLinesTab.Controls.Add(this.DeadLinesCalendar);
+            this.DeadLinesTab.Location = new System.Drawing.Point(4, 22);
+            this.DeadLinesTab.Name = "DeadLinesTab";
+            this.DeadLinesTab.Padding = new System.Windows.Forms.Padding(3);
+            this.DeadLinesTab.Size = new System.Drawing.Size(470, 380);
+            this.DeadLinesTab.TabIndex = 1;
+            this.DeadLinesTab.Text = "Dead Lines";
+            this.DeadLinesTab.UseVisualStyleBackColor = true;
+            // 
+            // DeadLinesCalendar
+            // 
+            this.DeadLinesCalendar.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.DeadLinesCalendar.Location = new System.Drawing.Point(38, 25);
+            this.DeadLinesCalendar.Name = "DeadLinesCalendar";
+            this.DeadLinesCalendar.TabIndex = 0;
             // 
             // Employee
             // 
@@ -339,18 +351,14 @@
             this.Employee.Text = "Employees";
             this.Employee.UseVisualStyleBackColor = true;
             // 
-            // Clock
+            // tabControl2
             // 
-            this.Clock.AutoSize = true;
-            this.Clock.Location = new System.Drawing.Point(432, 9);
-            this.Clock.Name = "Clock";
-            this.Clock.Size = new System.Drawing.Size(0, 13);
-            this.Clock.TabIndex = 18;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.Timer);
+            this.tabControl2.Controls.Add(this.tabRegisterEmployee);
+            this.tabControl2.Location = new System.Drawing.Point(-4, 0);
+            this.tabControl2.Name = "tabControl2";
+            this.tabControl2.SelectedIndex = 0;
+            this.tabControl2.Size = new System.Drawing.Size(478, 406);
+            this.tabControl2.TabIndex = 0;
             // 
             // tabRegisterEmployee
             // 
@@ -370,37 +378,32 @@
             this.tabRegisterEmployee.Text = "Register Employee";
             this.tabRegisterEmployee.UseVisualStyleBackColor = true;
             // 
-            // EmployeeName
+            // Refresh_button
             // 
-            this.EmployeeName.AutoSize = true;
-            this.EmployeeName.Location = new System.Drawing.Point(134, 45);
-            this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.Size = new System.Drawing.Size(87, 13);
-            this.EmployeeName.TabIndex = 6;
-            this.EmployeeName.Text = "Employee Name:";
+            this.Refresh_button.Location = new System.Drawing.Point(10, 315);
+            this.Refresh_button.Name = "Refresh_button";
+            this.Refresh_button.Size = new System.Drawing.Size(75, 23);
+            this.Refresh_button.TabIndex = 24;
+            this.Refresh_button.Text = "Refresh";
+            this.Refresh_button.UseVisualStyleBackColor = true;
+            this.Refresh_button.Click += new System.EventHandler(this.RefreshButtn);
             // 
-            // EmployeeSurname
+            // label8
             // 
-            this.EmployeeSurname.AutoSize = true;
-            this.EmployeeSurname.Location = new System.Drawing.Point(120, 83);
-            this.EmployeeSurname.Name = "EmployeeSurname";
-            this.EmployeeSurname.Size = new System.Drawing.Size(101, 13);
-            this.EmployeeSurname.TabIndex = 7;
-            this.EmployeeSurname.Text = "Employee Surname:";
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(7, 123);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(58, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Employees";
             // 
-            // TxtBxEmployeeName
+            // lstBoxEmployees
             // 
-            this.TxtBxEmployeeName.Location = new System.Drawing.Point(228, 45);
-            this.TxtBxEmployeeName.Name = "TxtBxEmployeeName";
-            this.TxtBxEmployeeName.Size = new System.Drawing.Size(100, 20);
-            this.TxtBxEmployeeName.TabIndex = 9;
-            // 
-            // TxtBxEmployeeSurname
-            // 
-            this.TxtBxEmployeeSurname.Location = new System.Drawing.Point(228, 83);
-            this.TxtBxEmployeeSurname.Name = "TxtBxEmployeeSurname";
-            this.TxtBxEmployeeSurname.Size = new System.Drawing.Size(100, 20);
-            this.TxtBxEmployeeSurname.TabIndex = 10;
+            this.lstBoxEmployees.FormattingEnabled = true;
+            this.lstBoxEmployees.Location = new System.Drawing.Point(7, 142);
+            this.lstBoxEmployees.Name = "lstBoxEmployees";
+            this.lstBoxEmployees.Size = new System.Drawing.Size(457, 95);
+            this.lstBoxEmployees.TabIndex = 13;
             // 
             // SaveEmployeeButton
             // 
@@ -412,41 +415,59 @@
             this.SaveEmployeeButton.UseVisualStyleBackColor = true;
             this.SaveEmployeeButton.Click += new System.EventHandler(this.SaveEmployees);
             // 
-            // lstBoxEmployees
+            // TxtBxEmployeeSurname
             // 
-            this.lstBoxEmployees.FormattingEnabled = true;
-            this.lstBoxEmployees.Location = new System.Drawing.Point(7, 142);
-            this.lstBoxEmployees.Name = "lstBoxEmployees";
-            this.lstBoxEmployees.Size = new System.Drawing.Size(457, 95);
-            this.lstBoxEmployees.TabIndex = 13;
+            this.TxtBxEmployeeSurname.Location = new System.Drawing.Point(228, 83);
+            this.TxtBxEmployeeSurname.Name = "TxtBxEmployeeSurname";
+            this.TxtBxEmployeeSurname.Size = new System.Drawing.Size(100, 20);
+            this.TxtBxEmployeeSurname.TabIndex = 10;
             // 
-            // label8
+            // TxtBxEmployeeName
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 123);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Employees";
+            this.TxtBxEmployeeName.Location = new System.Drawing.Point(228, 45);
+            this.TxtBxEmployeeName.Name = "TxtBxEmployeeName";
+            this.TxtBxEmployeeName.Size = new System.Drawing.Size(100, 20);
+            this.TxtBxEmployeeName.TabIndex = 9;
             // 
-            // Refresh_button
+            // EmployeeSurname
             // 
-            this.Refresh_button.Location = new System.Drawing.Point(10, 315);
-            this.Refresh_button.Name = "Refresh_button";
-            this.Refresh_button.Size = new System.Drawing.Size(75, 23);
-            this.Refresh_button.TabIndex = 24;
-            this.Refresh_button.Text = "Refresh";
-            this.Refresh_button.UseVisualStyleBackColor = true;
-            this.Refresh_button.Click += new System.EventHandler(this.RefreshButtn);
+            this.EmployeeSurname.AutoSize = true;
+            this.EmployeeSurname.Location = new System.Drawing.Point(120, 83);
+            this.EmployeeSurname.Name = "EmployeeSurname";
+            this.EmployeeSurname.Size = new System.Drawing.Size(101, 13);
+            this.EmployeeSurname.TabIndex = 7;
+            this.EmployeeSurname.Text = "Employee Surname:";
             // 
-            // tabControl2
+            // EmployeeName
             // 
-            this.tabControl2.Controls.Add(this.tabRegisterEmployee);
-            this.tabControl2.Location = new System.Drawing.Point(-4, 0);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(478, 406);
-            this.tabControl2.TabIndex = 0;
+            this.EmployeeName.AutoSize = true;
+            this.EmployeeName.Location = new System.Drawing.Point(134, 45);
+            this.EmployeeName.Name = "EmployeeName";
+            this.EmployeeName.Size = new System.Drawing.Size(87, 13);
+            this.EmployeeName.TabIndex = 6;
+            this.EmployeeName.Text = "Employee Name:";
+            // 
+            // Clock
+            // 
+            this.Clock.AutoSize = true;
+            this.Clock.Location = new System.Drawing.Point(432, 9);
+            this.Clock.Name = "Clock";
+            this.Clock.Size = new System.Drawing.Size(0, 13);
+            this.Clock.TabIndex = 18;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.Timer);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(7, 349);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
@@ -465,10 +486,11 @@
             this.tabPage1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            this.DeadLinesTab.ResumeLayout(false);
             this.Employee.ResumeLayout(false);
+            this.tabControl2.ResumeLayout(false);
             this.tabRegisterEmployee.ResumeLayout(false);
             this.tabRegisterEmployee.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,7 +500,7 @@
 
         private System.Windows.Forms.TabControl TbCntrl;
         private System.Windows.Forms.TabPage AddJbTB;
-        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.TabPage DeadLinesTab;
         private System.Windows.Forms.TabPage Employee;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
@@ -517,6 +539,8 @@
         private System.Windows.Forms.TextBox TxtBxEmployeeName;
         private System.Windows.Forms.Label EmployeeSurname;
         private System.Windows.Forms.Label EmployeeName;
+        private System.Windows.Forms.MonthCalendar DeadLinesCalendar;
+        private System.Windows.Forms.Button button1;
     }
 }
 
