@@ -50,6 +50,7 @@ namespace Trello_LikeApp
 
                 // Show the week numbers to the left of each week
                 deadLinesCalendar.ShowWeekNumbers = true;
+
             }
         }
         

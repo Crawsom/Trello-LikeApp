@@ -15,8 +15,10 @@ namespace Trello_LikeApp
     {
         public Form1()
         {
+
             InitializeComponent();
             timer1.Start();
+
         }
 
         private void save_button_Click(object sender, EventArgs e)
@@ -25,6 +27,7 @@ namespace Trello_LikeApp
              ProjectManagerTextBx,  ShortDescTextBx, StartTimeDate,
              EndTimeDate);
             s.Save();
+
         }
 
         private void Timer(object sender, EventArgs e)
