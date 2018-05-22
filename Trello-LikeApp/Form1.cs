@@ -39,6 +39,7 @@ namespace Trello_LikeApp
             {
                 bxEmployeers.Items.Add(item);
             }
+
             foreach (var item in load.Load())
             {
                 lstBoxEmployees.Items.Add(item);
@@ -46,6 +47,9 @@ namespace Trello_LikeApp
             //Adds the deadlines of projects to the Calendar tab
             SeeDeadLines deadLine = new SeeDeadLines(DeadLinesCalendar);
             deadLine.DeadLines();
+
+            //Shows alert for deadlines that are at one week to end
+            deadLine.AlertDeadLines();
         }
 
         private void ProjectsLoad(object sender, EventArgs e)

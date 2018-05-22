@@ -29,16 +29,14 @@ namespace Trello_LikeApp
             //Gets the text in the textboxes adds them in a textfile.
             DialogResult result;
             string message = "Saved";
-            string[] projectName = projectNameTextBx.ToString().Split(' ');
-            string[] projectManager = projectManagerTextBx.ToString().Split(' ');
-            string[] shortDescription = shortDescTextBx.ToString().Split(' ');
+            
             string[] startDate = startTimeDate.ToString().Split(' ');
             string[] endDate = endTimeDate.ToString().Split(' ');
             StreamWriter w = new StreamWriter(projectNameTextBx.Text + "_" +
                 DateTime.Now.ToString("yyyy-MM-dd") + ".tla");
-            w.WriteLine("Project Name: " + projectName[2]);
-            w.WriteLine("Project Manager: " + projectManager[2]);
-            w.WriteLine("Short Description: " + shortDescription[2]);
+            w.WriteLine("Project Name: " + projectNameTextBx.Text);
+            w.WriteLine("Project Manager: " + projectManagerTextBx.Text);
+            w.WriteLine("Short Description: " + shortDescTextBx.Text);
             w.WriteLine("Start Date: " + startDate[2]);
             w.WriteLine("End Date: " + endDate[2]);
             w.Close();
