@@ -55,6 +55,7 @@
             this.SbTaskName = new System.Windows.Forms.Label();
             this.txtSTName = new System.Windows.Forms.TextBox();
             this.DeadLinesTab = new System.Windows.Forms.TabPage();
+            this.projectListLbl = new System.Windows.Forms.Label();
             this.DeadLinesCalendar = new System.Windows.Forms.MonthCalendar();
             this.Employee = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
@@ -69,6 +70,7 @@
             this.EmployeeName = new System.Windows.Forms.Label();
             this.Clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.ProjectsNearDeadLinelstbx = new System.Windows.Forms.ListBox();
             this.TbCntrl.SuspendLayout();
             this.AddJbTB.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -322,6 +324,8 @@
             // 
             // DeadLinesTab
             // 
+            this.DeadLinesTab.Controls.Add(this.ProjectsNearDeadLinelstbx);
+            this.DeadLinesTab.Controls.Add(this.projectListLbl);
             this.DeadLinesTab.Controls.Add(this.DeadLinesCalendar);
             this.DeadLinesTab.Location = new System.Drawing.Point(4, 22);
             this.DeadLinesTab.Name = "DeadLinesTab";
@@ -331,10 +335,19 @@
             this.DeadLinesTab.Text = "Dead Lines";
             this.DeadLinesTab.UseVisualStyleBackColor = true;
             // 
+            // projectListLbl
+            // 
+            this.projectListLbl.AutoSize = true;
+            this.projectListLbl.Location = new System.Drawing.Point(29, 187);
+            this.projectListLbl.Name = "projectListLbl";
+            this.projectListLbl.Size = new System.Drawing.Size(123, 13);
+            this.projectListLbl.TabIndex = 2;
+            this.projectListLbl.Text = "Projects Near Dead Line";
+            // 
             // DeadLinesCalendar
             // 
-            this.DeadLinesCalendar.CalendarDimensions = new System.Drawing.Size(2, 2);
-            this.DeadLinesCalendar.Location = new System.Drawing.Point(29, 12);
+            this.DeadLinesCalendar.CalendarDimensions = new System.Drawing.Size(2, 1);
+            this.DeadLinesCalendar.Location = new System.Drawing.Point(29, 9);
             this.DeadLinesCalendar.Name = "DeadLinesCalendar";
             this.DeadLinesCalendar.TabIndex = 0;
             // 
@@ -458,6 +471,14 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer);
             // 
+            // ProjectsNearDeadLinelstbx
+            // 
+            this.ProjectsNearDeadLinelstbx.FormattingEnabled = true;
+            this.ProjectsNearDeadLinelstbx.Location = new System.Drawing.Point(32, 204);
+            this.ProjectsNearDeadLinelstbx.Name = "ProjectsNearDeadLinelstbx";
+            this.ProjectsNearDeadLinelstbx.Size = new System.Drawing.Size(385, 108);
+            this.ProjectsNearDeadLinelstbx.TabIndex = 3;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -476,6 +497,7 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             this.DeadLinesTab.ResumeLayout(false);
+            this.DeadLinesTab.PerformLayout();
             this.Employee.ResumeLayout(false);
             this.tabControl2.ResumeLayout(false);
             this.tabRegisterEmployee.ResumeLayout(false);
@@ -529,6 +551,8 @@
         private System.Windows.Forms.Label EmployeeSurname;
         private System.Windows.Forms.Label EmployeeName;
         private System.Windows.Forms.MonthCalendar DeadLinesCalendar;
+        private System.Windows.Forms.Label projectListLbl;
+        private System.Windows.Forms.ListBox ProjectsNearDeadLinelstbx;
     }
 }
 

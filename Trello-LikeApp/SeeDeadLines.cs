@@ -7,10 +7,12 @@ namespace Trello_LikeApp
     class SeeDeadLines
     {
         private MonthCalendar deadLinesCalendar;
-
-        public SeeDeadLines(MonthCalendar deadLinesCalendar)
+        private ListBox ProjectsNearDeadLinelstbx;
+        public SeeDeadLines(MonthCalendar deadLinesCalendar,
+            ListBox ProjectsNearDeadLinelstbx)
         {
             this.deadLinesCalendar = deadLinesCalendar;
+            this.ProjectsNearDeadLinelstbx = ProjectsNearDeadLinelstbx;
         }
 
         //See dead lines of the projects in the calendar
@@ -44,7 +46,7 @@ namespace Trello_LikeApp
                 catch (FileNotFoundException e) { MessageBox.Show(e.Message); }
                 catch (IOException e) { MessageBox.Show(e.Message); }
                 catch (Exception e) { MessageBox.Show(e.Message); }
-                
+
                 // Do not show the "Today" banner.
                 deadLinesCalendar.ShowToday = false;
 
@@ -53,11 +55,11 @@ namespace Trello_LikeApp
 
             }
         }
-        
+
         //Shows alert for deadlines that are at one week to end
         public void AlertDeadLines()
         {
-            string filesCloseDeadLine="";
+            string filesCloseDeadLine = "";
             string[] listFiles = Directory.GetFiles(".", "*.tla");
             for (int i = 0; i < listFiles.Length; i++)
             {
@@ -95,10 +97,10 @@ namespace Trello_LikeApp
                                 default:
 
                                     break;
-
                             }
                         }
                     } while (line != null);
+
                     reader.Close();
                 }
                 catch (PathTooLongException e) { MessageBox.Show(e.Message); }
@@ -108,6 +110,11 @@ namespace Trello_LikeApp
             }
             MessageBox.Show(filesCloseDeadLine + "These projects are near the" +
                 " deadline");
+            string[] deadLinesArray = filesCloseDeadLine.Split('\n');
+            foreach (var item in deadLinesArray)
+            {
+                ProjectsNearDeadLinelstbx.Items.Add(item);
+            }
         }
     }
 }
