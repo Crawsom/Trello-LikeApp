@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
@@ -15,10 +8,8 @@ namespace Trello_LikeApp
     {
         public Form1()
         {
-
             InitializeComponent();
             timer1.Start();
-
         }
 
         private void save_button_Click(object sender, EventArgs e)
@@ -56,6 +47,11 @@ namespace Trello_LikeApp
 
             //Shows alert for deadlines that are at one week to end
             deadLine.AlertDeadLines();
+
+            //
+            Extras extra = new Extras(label2, label1, label4, label5,
+                save_button);
+            extra.ToolTips();
         }
 
         private void ProjectsLoad(object sender, EventArgs e)
@@ -74,7 +70,7 @@ namespace Trello_LikeApp
                 && lstBxProjects.CheckedItems.Count > 0)
             {
                 SubTasks subtasks = new SubTasks(txtSTName.Text, bxEmployeers.Text,
-                    txtSTDescription.Text);
+                    txtSTDescription.Text, txtBxSTDuration.Text, TaskPriority.Value);
 
                 foreach (var st in lstBxProjects.CheckedItems)
                     subtasks.TrySave(st.ToString(), subtasks);
@@ -115,5 +111,6 @@ namespace Trello_LikeApp
             // Changes the selection mode from double-click to single click.
             lstBxProjects.CheckOnClick = true;
         }
+
     }
 }
