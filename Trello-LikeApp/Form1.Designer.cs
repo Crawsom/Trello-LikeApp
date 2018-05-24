@@ -45,6 +45,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.ProjectNameTextBx = new System.Windows.Forms.TextBox();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.TaskPriority = new System.Windows.Forms.NumericUpDown();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtBxSTDuration = new System.Windows.Forms.TextBox();
+            this.label9 = new System.Windows.Forms.Label();
             this.btnSubTasks = new System.Windows.Forms.Button();
             this.lblProjects = new System.Windows.Forms.Label();
             this.lstBxProjects = new System.Windows.Forms.CheckedListBox();
@@ -54,7 +58,9 @@
             this.label7 = new System.Windows.Forms.Label();
             this.SbTaskName = new System.Windows.Forms.Label();
             this.txtSTName = new System.Windows.Forms.TextBox();
+            this.tabPage2 = new System.Windows.Forms.TabPage();
             this.DeadLinesTab = new System.Windows.Forms.TabPage();
+            this.ProjectsNearDeadLinelstbx = new System.Windows.Forms.ListBox();
             this.projectListLbl = new System.Windows.Forms.Label();
             this.DeadLinesCalendar = new System.Windows.Forms.MonthCalendar();
             this.Employee = new System.Windows.Forms.TabPage();
@@ -70,12 +76,13 @@
             this.EmployeeName = new System.Windows.Forms.Label();
             this.Clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.ProjectsNearDeadLinelstbx = new System.Windows.Forms.ListBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.TbCntrl.SuspendLayout();
             this.AddJbTB.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskPriority)).BeginInit();
             this.DeadLinesTab.SuspendLayout();
             this.Employee.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -108,6 +115,7 @@
             // 
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage4);
+            this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Location = new System.Drawing.Point(-4, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
@@ -228,6 +236,10 @@
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.TaskPriority);
+            this.tabPage4.Controls.Add(this.label10);
+            this.tabPage4.Controls.Add(this.txtBxSTDuration);
+            this.tabPage4.Controls.Add(this.label9);
             this.tabPage4.Controls.Add(this.btnSubTasks);
             this.tabPage4.Controls.Add(this.lblProjects);
             this.tabPage4.Controls.Add(this.lstBxProjects);
@@ -245,6 +257,43 @@
             this.tabPage4.Text = "Add Sub Tasks";
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
+            // TaskPriority
+            // 
+            this.TaskPriority.Location = new System.Drawing.Point(332, 230);
+            this.TaskPriority.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.TaskPriority.Name = "TaskPriority";
+            this.TaskPriority.Size = new System.Drawing.Size(120, 20);
+            this.TaskPriority.TabIndex = 26;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(232, 232);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(90, 13);
+            this.label10.TabIndex = 25;
+            this.label10.Text = "Sub Task Priority:";
+            // 
+            // txtBxSTDuration
+            // 
+            this.txtBxSTDuration.Location = new System.Drawing.Point(332, 196);
+            this.txtBxSTDuration.Name = "txtBxSTDuration";
+            this.txtBxSTDuration.Size = new System.Drawing.Size(121, 20);
+            this.txtBxSTDuration.TabIndex = 24;
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(226, 199);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(96, 13);
+            this.label9.TabIndex = 23;
+            this.label9.Text = "SubTask Duration:";
+            // 
             // btnSubTasks
             // 
             this.btnSubTasks.Location = new System.Drawing.Point(377, 315);
@@ -258,7 +307,7 @@
             // lblProjects
             // 
             this.lblProjects.AutoSize = true;
-            this.lblProjects.Location = new System.Drawing.Point(76, 88);
+            this.lblProjects.Location = new System.Drawing.Point(86, 96);
             this.lblProjects.Name = "lblProjects";
             this.lblProjects.Size = new System.Drawing.Size(45, 13);
             this.lblProjects.TabIndex = 21;
@@ -267,7 +316,7 @@
             // lstBxProjects
             // 
             this.lstBxProjects.FormattingEnabled = true;
-            this.lstBxProjects.Location = new System.Drawing.Point(6, 112);
+            this.lstBxProjects.Location = new System.Drawing.Point(16, 120);
             this.lstBxProjects.Name = "lstBxProjects";
             this.lstBxProjects.Size = new System.Drawing.Size(177, 109);
             this.lstBxProjects.TabIndex = 20;
@@ -276,14 +325,14 @@
             // bxEmployeers
             // 
             this.bxEmployeers.FormattingEnabled = true;
-            this.bxEmployeers.Location = new System.Drawing.Point(301, 148);
+            this.bxEmployeers.Location = new System.Drawing.Point(332, 128);
             this.bxEmployeers.Name = "bxEmployeers";
             this.bxEmployeers.Size = new System.Drawing.Size(121, 21);
             this.bxEmployeers.TabIndex = 19;
             // 
             // txtSTDescription
             // 
-            this.txtSTDescription.Location = new System.Drawing.Point(301, 182);
+            this.txtSTDescription.Location = new System.Drawing.Point(332, 162);
             this.txtSTDescription.Name = "txtSTDescription";
             this.txtSTDescription.Size = new System.Drawing.Size(121, 20);
             this.txtSTDescription.TabIndex = 18;
@@ -291,7 +340,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(200, 185);
+            this.label6.Location = new System.Drawing.Point(231, 165);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(91, 13);
             this.label6.TabIndex = 17;
@@ -300,7 +349,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(189, 151);
+            this.label7.Location = new System.Drawing.Point(220, 131);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(106, 13);
             this.label7.TabIndex = 15;
@@ -309,7 +358,7 @@
             // SbTaskName
             // 
             this.SbTaskName.AutoSize = true;
-            this.SbTaskName.Location = new System.Drawing.Point(204, 119);
+            this.SbTaskName.Location = new System.Drawing.Point(235, 99);
             this.SbTaskName.Name = "SbTaskName";
             this.SbTaskName.Size = new System.Drawing.Size(87, 13);
             this.SbTaskName.TabIndex = 14;
@@ -317,10 +366,20 @@
             // 
             // txtSTName
             // 
-            this.txtSTName.Location = new System.Drawing.Point(301, 116);
+            this.txtSTName.Location = new System.Drawing.Point(332, 96);
             this.txtSTName.Name = "txtSTName";
             this.txtSTName.Size = new System.Drawing.Size(121, 20);
             this.txtSTName.TabIndex = 13;
+            // 
+            // tabPage2
+            // 
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
+            this.tabPage2.Name = "tabPage2";
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage2.Size = new System.Drawing.Size(471, 354);
+            this.tabPage2.TabIndex = 2;
+            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // DeadLinesTab
             // 
@@ -334,6 +393,14 @@
             this.DeadLinesTab.TabIndex = 1;
             this.DeadLinesTab.Text = "Dead Lines";
             this.DeadLinesTab.UseVisualStyleBackColor = true;
+            // 
+            // ProjectsNearDeadLinelstbx
+            // 
+            this.ProjectsNearDeadLinelstbx.FormattingEnabled = true;
+            this.ProjectsNearDeadLinelstbx.Location = new System.Drawing.Point(32, 204);
+            this.ProjectsNearDeadLinelstbx.Name = "ProjectsNearDeadLinelstbx";
+            this.ProjectsNearDeadLinelstbx.Size = new System.Drawing.Size(385, 108);
+            this.ProjectsNearDeadLinelstbx.TabIndex = 3;
             // 
             // projectListLbl
             // 
@@ -471,14 +538,6 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer);
             // 
-            // ProjectsNearDeadLinelstbx
-            // 
-            this.ProjectsNearDeadLinelstbx.FormattingEnabled = true;
-            this.ProjectsNearDeadLinelstbx.Location = new System.Drawing.Point(32, 204);
-            this.ProjectsNearDeadLinelstbx.Name = "ProjectsNearDeadLinelstbx";
-            this.ProjectsNearDeadLinelstbx.Size = new System.Drawing.Size(385, 108);
-            this.ProjectsNearDeadLinelstbx.TabIndex = 3;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -496,6 +555,7 @@
             this.tabPage1.PerformLayout();
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TaskPriority)).EndInit();
             this.DeadLinesTab.ResumeLayout(false);
             this.DeadLinesTab.PerformLayout();
             this.Employee.ResumeLayout(false);
@@ -553,6 +613,12 @@
         private System.Windows.Forms.MonthCalendar DeadLinesCalendar;
         private System.Windows.Forms.Label projectListLbl;
         private System.Windows.Forms.ListBox ProjectsNearDeadLinelstbx;
+        private System.Windows.Forms.TextBox txtBxSTDuration;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.NumericUpDown TaskPriority;
+        private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 
