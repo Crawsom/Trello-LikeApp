@@ -77,12 +77,16 @@
             this.Clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.editProjectsChckBox = new System.Windows.Forms.CheckedListBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.loadPrEditor = new System.Windows.Forms.Button();
             this.TbCntrl.SuspendLayout();
             this.AddJbTB.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TaskPriority)).BeginInit();
+            this.tabPage2.SuspendLayout();
             this.DeadLinesTab.SuspendLayout();
             this.Employee.SuspendLayout();
             this.tabControl2.SuspendLayout();
@@ -252,7 +256,7 @@
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(471, 354);
+            this.tabPage4.Size = new System.Drawing.Size(458, 354);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "Add Sub Tasks";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -373,12 +377,15 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.loadPrEditor);
+            this.tabPage2.Controls.Add(this.label11);
+            this.tabPage2.Controls.Add(this.editProjectsChckBox);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(471, 354);
+            this.tabPage2.Size = new System.Drawing.Size(458, 354);
             this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "tabPage2";
+            this.tabPage2.Text = "Edit Projects";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // DeadLinesTab
@@ -538,6 +545,33 @@
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer);
             // 
+            // editProjectsChckBox
+            // 
+            this.editProjectsChckBox.FormattingEnabled = true;
+            this.editProjectsChckBox.Location = new System.Drawing.Point(40, 32);
+            this.editProjectsChckBox.Name = "editProjectsChckBox";
+            this.editProjectsChckBox.Size = new System.Drawing.Size(386, 229);
+            this.editProjectsChckBox.TabIndex = 0;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(183, 16);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(77, 13);
+            this.label11.TabIndex = 1;
+            this.label11.Text = "Projects to edit";
+            // 
+            // loadPrEditor
+            // 
+            this.loadPrEditor.Location = new System.Drawing.Point(377, 315);
+            this.loadPrEditor.Name = "loadPrEditor";
+            this.loadPrEditor.Size = new System.Drawing.Size(75, 23);
+            this.loadPrEditor.TabIndex = 2;
+            this.loadPrEditor.Text = "Load";
+            this.loadPrEditor.UseVisualStyleBackColor = true;
+            this.loadPrEditor.Click += new System.EventHandler(this.loadPrEdit);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -546,7 +580,7 @@
             this.Controls.Add(this.Clock);
             this.Controls.Add(this.TbCntrl);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "Trello-Like App";
             this.Load += new System.EventHandler(this.loadForm);
             this.TbCntrl.ResumeLayout(false);
             this.AddJbTB.ResumeLayout(false);
@@ -556,6 +590,8 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TaskPriority)).EndInit();
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.DeadLinesTab.ResumeLayout(false);
             this.DeadLinesTab.PerformLayout();
             this.Employee.ResumeLayout(false);
@@ -619,6 +655,9 @@
         private System.Windows.Forms.NumericUpDown TaskPriority;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckedListBox editProjectsChckBox;
+        private System.Windows.Forms.Button loadPrEditor;
     }
 }
 

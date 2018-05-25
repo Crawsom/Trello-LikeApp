@@ -4,7 +4,6 @@ namespace Trello_LikeApp
 {
     class Extras
     {
-        private object toolTip1;
         private Control label2;
         private Control label1;
         private Control label4;
@@ -34,13 +33,14 @@ namespace Trello_LikeApp
 
             // Force the ToolTip text to be displayed whether or not the form is active.
             toolTip.ShowAlways = true;
+            //toolTip.IsBalloon = true;
 
             // Set up the ToolTip text.
-            toolTip.SetToolTip(label2, "Name of your Project.");
-            toolTip.SetToolTip(label1, "Name of your Project manager.");
-            toolTip.SetToolTip(label4, "Start Day of your project.");
-            toolTip.SetToolTip(label5, "Last Day of your project.");
-            toolTip.SetToolTip(save_button, "Saves all.");
+            toolTip.SetToolTip(label2, "Name of your Project");
+            toolTip.SetToolTip(label1, "Name of your Project manager");
+            toolTip.SetToolTip(label4, "Start Day of your project");
+            toolTip.SetToolTip(label5, "Last Day of your project");
+            toolTip.SetToolTip(save_button, "Saves all");
         }
     }
 }

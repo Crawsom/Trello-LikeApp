@@ -18,7 +18,6 @@ namespace Trello_LikeApp
              ProjectManagerTextBx,  ShortDescTextBx, StartTimeDate,
              EndTimeDate);
             s.Save();
-
         }
 
         private void Timer(object sender, EventArgs e)
@@ -28,8 +27,6 @@ namespace Trello_LikeApp
 
         private void loadForm(object sender, EventArgs e)
         {
-
-
             LoadEmployees load = new LoadEmployees();
             foreach (var item in load.Load())
             {
@@ -60,6 +57,8 @@ namespace Trello_LikeApp
             string[] listFiles = Directory.GetFiles(".", "*.tla");
             foreach (string lf in listFiles)
                 lstBxProjects.Items.Add(lf);
+            foreach (string lf in listFiles)
+                editProjectsChckBox.Items.Add(lf);
 
         }
 
@@ -112,5 +111,10 @@ namespace Trello_LikeApp
             lstBxProjects.CheckOnClick = true;
         }
 
+        private void loadPrEdit(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2();
+            form2.ShowDialog();
+        }
     }
 }
