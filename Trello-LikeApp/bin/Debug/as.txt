@@ -1,1 +1,0 @@
-Project Name: System.Windows.Forms.TextBox, Text: asdasdasd

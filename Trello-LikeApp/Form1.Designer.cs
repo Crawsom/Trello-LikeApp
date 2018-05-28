@@ -66,7 +66,6 @@
             this.Employee = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabRegisterEmployee = new System.Windows.Forms.TabPage();
-            this.Refresh_button = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.lstBoxEmployees = new System.Windows.Forms.ListBox();
             this.SaveEmployeeButton = new System.Windows.Forms.Button();
@@ -80,6 +79,10 @@
             this.editProjectsChckBox = new System.Windows.Forms.CheckedListBox();
             this.label11 = new System.Windows.Forms.Label();
             this.loadPrEditor = new System.Windows.Forms.Button();
+            this.label12 = new System.Windows.Forms.Label();
+            this.ageTxtBx = new System.Windows.Forms.TextBox();
+            this.dniTxtBx = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.TbCntrl.SuspendLayout();
             this.AddJbTB.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -383,7 +386,7 @@
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(458, 354);
+            this.tabPage2.Size = new System.Drawing.Size(471, 354);
             this.tabPage2.TabIndex = 2;
             this.tabPage2.Text = "Edit Projects";
             this.tabPage2.UseVisualStyleBackColor = true;
@@ -447,7 +450,10 @@
             // 
             // tabRegisterEmployee
             // 
-            this.tabRegisterEmployee.Controls.Add(this.Refresh_button);
+            this.tabRegisterEmployee.Controls.Add(this.label13);
+            this.tabRegisterEmployee.Controls.Add(this.dniTxtBx);
+            this.tabRegisterEmployee.Controls.Add(this.ageTxtBx);
+            this.tabRegisterEmployee.Controls.Add(this.label12);
             this.tabRegisterEmployee.Controls.Add(this.label8);
             this.tabRegisterEmployee.Controls.Add(this.lstBoxEmployees);
             this.tabRegisterEmployee.Controls.Add(this.SaveEmployeeButton);
@@ -463,20 +469,10 @@
             this.tabRegisterEmployee.Text = "Register Employee";
             this.tabRegisterEmployee.UseVisualStyleBackColor = true;
             // 
-            // Refresh_button
-            // 
-            this.Refresh_button.Location = new System.Drawing.Point(10, 315);
-            this.Refresh_button.Name = "Refresh_button";
-            this.Refresh_button.Size = new System.Drawing.Size(75, 23);
-            this.Refresh_button.TabIndex = 24;
-            this.Refresh_button.Text = "Refresh";
-            this.Refresh_button.UseVisualStyleBackColor = true;
-            this.Refresh_button.Click += new System.EventHandler(this.RefreshButtn);
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 123);
+            this.label8.Location = new System.Drawing.Point(7, 168);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(58, 13);
             this.label8.TabIndex = 14;
@@ -485,7 +481,7 @@
             // lstBoxEmployees
             // 
             this.lstBoxEmployees.FormattingEnabled = true;
-            this.lstBoxEmployees.Location = new System.Drawing.Point(7, 142);
+            this.lstBoxEmployees.Location = new System.Drawing.Point(10, 194);
             this.lstBoxEmployees.Name = "lstBoxEmployees";
             this.lstBoxEmployees.Size = new System.Drawing.Size(457, 95);
             this.lstBoxEmployees.TabIndex = 13;
@@ -502,14 +498,14 @@
             // 
             // TxtBxEmployeeSurname
             // 
-            this.TxtBxEmployeeSurname.Location = new System.Drawing.Point(228, 83);
+            this.TxtBxEmployeeSurname.Location = new System.Drawing.Point(227, 66);
             this.TxtBxEmployeeSurname.Name = "TxtBxEmployeeSurname";
             this.TxtBxEmployeeSurname.Size = new System.Drawing.Size(100, 20);
             this.TxtBxEmployeeSurname.TabIndex = 10;
             // 
             // TxtBxEmployeeName
             // 
-            this.TxtBxEmployeeName.Location = new System.Drawing.Point(228, 45);
+            this.TxtBxEmployeeName.Location = new System.Drawing.Point(227, 40);
             this.TxtBxEmployeeName.Name = "TxtBxEmployeeName";
             this.TxtBxEmployeeName.Size = new System.Drawing.Size(100, 20);
             this.TxtBxEmployeeName.TabIndex = 9;
@@ -517,20 +513,20 @@
             // EmployeeSurname
             // 
             this.EmployeeSurname.AutoSize = true;
-            this.EmployeeSurname.Location = new System.Drawing.Point(120, 83);
+            this.EmployeeSurname.Location = new System.Drawing.Point(125, 69);
             this.EmployeeSurname.Name = "EmployeeSurname";
-            this.EmployeeSurname.Size = new System.Drawing.Size(101, 13);
+            this.EmployeeSurname.Size = new System.Drawing.Size(52, 13);
             this.EmployeeSurname.TabIndex = 7;
-            this.EmployeeSurname.Text = "Employee Surname:";
+            this.EmployeeSurname.Text = "Surname:";
             // 
             // EmployeeName
             // 
             this.EmployeeName.AutoSize = true;
-            this.EmployeeName.Location = new System.Drawing.Point(134, 45);
+            this.EmployeeName.Location = new System.Drawing.Point(139, 40);
             this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.Size = new System.Drawing.Size(87, 13);
+            this.EmployeeName.Size = new System.Drawing.Size(38, 13);
             this.EmployeeName.TabIndex = 6;
-            this.EmployeeName.Text = "Employee Name:";
+            this.EmployeeName.Text = "Name:";
             // 
             // Clock
             // 
@@ -571,6 +567,38 @@
             this.loadPrEditor.Text = "Load";
             this.loadPrEditor.UseVisualStyleBackColor = true;
             this.loadPrEditor.Click += new System.EventHandler(this.loadPrEdit);
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(148, 97);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(29, 13);
+            this.label12.TabIndex = 25;
+            this.label12.Text = "Age:";
+            // 
+            // ageTxtBx
+            // 
+            this.ageTxtBx.Location = new System.Drawing.Point(227, 94);
+            this.ageTxtBx.Name = "ageTxtBx";
+            this.ageTxtBx.Size = new System.Drawing.Size(100, 20);
+            this.ageTxtBx.TabIndex = 26;
+            // 
+            // dniTxtBx
+            // 
+            this.dniTxtBx.Location = new System.Drawing.Point(227, 121);
+            this.dniTxtBx.Name = "dniTxtBx";
+            this.dniTxtBx.Size = new System.Drawing.Size(100, 20);
+            this.dniTxtBx.TabIndex = 27;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(148, 124);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(29, 13);
+            this.label13.TabIndex = 28;
+            this.label13.Text = "DNI:";
             // 
             // Form1
             // 
@@ -638,7 +666,6 @@
         private System.Windows.Forms.Button btnSubTasks;
         private System.Windows.Forms.TabControl tabControl2;
         private System.Windows.Forms.TabPage tabRegisterEmployee;
-        private System.Windows.Forms.Button Refresh_button;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ListBox lstBoxEmployees;
         private System.Windows.Forms.Button SaveEmployeeButton;
@@ -658,6 +685,10 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckedListBox editProjectsChckBox;
         private System.Windows.Forms.Button loadPrEditor;
+        private System.Windows.Forms.TextBox ageTxtBx;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.TextBox dniTxtBx;
     }
 }
 
