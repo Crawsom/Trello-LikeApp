@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.IO;
-
+using System.Text.RegularExpressions;
 namespace Trello_LikeApp
 {
     public partial class Form1 : Form
@@ -83,13 +83,36 @@ namespace Trello_LikeApp
 
         private void SaveEmployees(object sender, EventArgs e)
         {
-            Employees employee = new Employees(TxtBxEmployeeName.Text,
-                TxtBxEmployeeSurname.Text);
-            employee.Save();
+            //Checks if the fields like DNI is ok or not
+            if (Regex.IsMatch(dniTxtBx.Text,
+                "/^[0-9]{8}[a-z]?$") || dniTxtBx.Text.Length == 9 &&
+                TxtBxEmployeeName.Text.Length > 0 &&
+                TxtBxEmployeeSurname.Text.Length > 0)
+            {
+                Employees employee = new Employees(TxtBxEmployeeName.Text,
+                    TxtBxEmployeeSurname.Text, ageTxtBx.Text, dniTxtBx.Text);
+                employee.Save();
+            }
+            else
+            {
+                MessageBox.Show("Dni must be like 12345678A. \n" +
+                    "No textBoxes should be empty.");
+            }
+
+            /* 
+             * Refresh the employees page so you can see the new employee in 
+             * employee list box
+             */
+            LoadEmployees load = new LoadEmployees();
+            lstBoxEmployees.Items.Clear();
+            foreach (var item in load.Load())
+            {
+                lstBoxEmployees.Items.Add(item);
+            }
         }
 
         /*. Refresh the employees page so you can see the new employee in 
-          . employee list box*/
+          . employee list box
         private void refreshForm()
         {
             LoadEmployees load = new LoadEmployees();
@@ -103,7 +126,7 @@ namespace Trello_LikeApp
         private void RefreshButtn(object sender, EventArgs e)
         {
             refreshForm();
-        }
+        }*/
 
         private void lstBxProjects_SelectedIndexChanged(object sender, EventArgs e)
         {
