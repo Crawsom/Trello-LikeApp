@@ -13,11 +13,11 @@ namespace Trello_LikeApp
         public List<object> Load()
         {
             List<object> loadEmployees = new List<object>();
-            if (!File.Exists("employee.tla"))
-                MessageBox.Show("File not exists");
-            else
+            try
             {
-                try
+                if (!File.Exists("employee.tla"))
+                    MessageBox.Show("File not exists");
+                else
                 {
                     StreamReader reader = File.OpenText("employee.tla");
                     string line;
@@ -31,12 +31,12 @@ namespace Trello_LikeApp
                     } while (line != null);
                     reader.Close();
                 }
-                catch (PathTooLongException e) { MessageBox.Show(e.Message); }
-                catch (FileNotFoundException e) { MessageBox.Show(e.Message); }
-                catch (IOException e) { MessageBox.Show(e.Message); }
-                catch (Exception e) { MessageBox.Show(e.Message); }
             }
-            
+            catch (PathTooLongException e) { MessageBox.Show(e.Message); }
+            catch (FileNotFoundException e) { MessageBox.Show(e.Message); }
+            catch (IOException e) { MessageBox.Show(e.Message); }
+            catch (Exception e) { MessageBox.Show(e.Message); }
+
             return loadEmployees;
         }
     }

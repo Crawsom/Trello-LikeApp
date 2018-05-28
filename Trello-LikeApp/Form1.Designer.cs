@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.TbCntrl = new System.Windows.Forms.TabControl();
             this.AddJbTB = new System.Windows.Forms.TabPage();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -607,6 +608,8 @@
             this.ClientSize = new System.Drawing.Size(480, 418);
             this.Controls.Add(this.Clock);
             this.Controls.Add(this.TbCntrl);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Trello-Like App";
             this.Load += new System.EventHandler(this.loadForm);
