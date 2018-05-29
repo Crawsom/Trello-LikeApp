@@ -16,7 +16,7 @@ namespace Trello_LikeApp
             try
             {
                 if (!File.Exists("employee.tla"))
-                    MessageBox.Show("File not exists");
+                    MessageBox.Show("File don't exists");
                 else
                 {
                     StreamReader reader = File.OpenText("employee.tla");
