@@ -6,21 +6,20 @@ namespace Trello_LikeApp
 {
     class SaveCreatedProject 
     {
-        private TextBox projectNameTextBx;
-        private TextBox projectManagerTextBx;
-        private TextBox shortDescTextBx;
-        private object startTimeDate;
-        private object endTimeDate;
+        private string pName;
+        private string pManager;
+        private string shortDesc;
+        private string dateStart;
+        private string dateEnd;
 
-        public SaveCreatedProject(TextBox projectNameTextBx, 
-            TextBox projectManagerTextBx, TextBox shortDescTextBx,
-            object startTimeDate, object endTimeDate)
+        public SaveCreatedProject(string pName, string pManager, 
+            string shortDesc, string dateStart, string dateEnd)
         {
-            this.projectNameTextBx = projectNameTextBx;
-            this.projectManagerTextBx = projectManagerTextBx;
-            this.shortDescTextBx = shortDescTextBx;
-            this.startTimeDate = startTimeDate;
-            this.endTimeDate = endTimeDate;
+            this.pName = pName;
+            this.pManager = pManager;
+            this.shortDesc = shortDesc;
+            this.dateStart = dateStart;
+            this.dateEnd = dateEnd;
         }
 
         //Save Project
@@ -28,7 +27,7 @@ namespace Trello_LikeApp
         {
             try
             {
-                if (File.Exists(projectNameTextBx.Text + "_" +
+                if (File.Exists(pName + "_" +
                         DateTime.Now.ToString("yyyy-MM-dd") + ".tla"))
                 {
                     MessageBox.Show("Already Exists");
@@ -39,15 +38,16 @@ namespace Trello_LikeApp
                     DialogResult result;
                     string message = "Saved";
 
-                    string[] startDate = startTimeDate.ToString().Split(' ');
-                    string[] endDate = endTimeDate.ToString().Split(' ');
-                    StreamWriter w = new StreamWriter(projectNameTextBx.Text + "_" +
+                    string[] startDate = dateStart.Split(' ');
+                    string[] endDate = dateEnd.Split(' ');
+                    MessageBox.Show(dateEnd);
+                    StreamWriter w = new StreamWriter(pName + "_" +
                         DateTime.Now.ToString("yyyy-MM-dd") + ".tla");
-                    w.WriteLine("Project Name: " + projectNameTextBx.Text);
-                    w.WriteLine("Project Manager: " + projectManagerTextBx.Text);
-                    w.WriteLine("Short Description: " + shortDescTextBx.Text);
-                    w.WriteLine("Start Date: " + startDate[2]);
-                    w.WriteLine("End Date: " + endDate[2]);
+                    w.WriteLine("Project Name: " + pName);
+                    w.WriteLine("Project Manager: " + pManager);
+                    w.WriteLine("Short Description: " + shortDesc);
+                    w.WriteLine("Start Date: " + startDate[0]);
+                    w.WriteLine("End Date: " + endDate[0]);
                     w.Close();
                     result = MessageBox.Show(message);
                 }

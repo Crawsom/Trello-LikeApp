@@ -14,9 +14,13 @@ namespace Trello_LikeApp
 
         private void save_button_Click(object sender, EventArgs e)
         {
-            SaveCreatedProject s = new SaveCreatedProject(ProjectNameTextBx,
-             ProjectManagerTextBx,  ShortDescTextBx, StartTimeDate,
-             EndTimeDate);
+            string pName = ProjectNameTextBx.Text;
+            string pManager = ProjectManagerTextBx.Text;
+            string shortDesc = ShortDescTextBx.Text;
+            string dateStart = Convert.ToString(EndTimeDate.Value);
+            string dateEnd = Convert.ToString(EndTimeDate.Value);
+            SaveCreatedProject s = new SaveCreatedProject(pName, pManager,
+                shortDesc, dateStart, dateEnd);
             s.Save();
         }
 
@@ -136,7 +140,7 @@ namespace Trello_LikeApp
 
         private void loadPrEdit(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2();
+            Form2 form2 = new Form2(editProjectsChckBox);
             form2.ShowDialog();
         }
     }
