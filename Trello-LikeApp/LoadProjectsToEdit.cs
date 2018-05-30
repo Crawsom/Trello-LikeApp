@@ -11,34 +11,34 @@ namespace Trello_LikeApp
         private Label label13;
         private Label label14;
         private Label label15;
-        private CheckedListBox editProjectsChckBox;
+        private string editProject;
 
 
-
-        public LoadProjectsToEdit(Label label11, 
-            CheckedListBox editProjectsChckBox, 
-            Label label12, Label label13, 
+        public LoadProjectsToEdit(Label label11,
+            string editProject,
+            Label label12, Label label13,
             Label label14, Label label15)
         {
             this.label11 = label11;
-            this.editProjectsChckBox = editProjectsChckBox;
+            this.editProject = editProject;
             this.label12 = label12;
             this.label13 = label13;
             this.label14 = label14;
             this.label15 = label15;
+
         }
 
-        public void LoadThings()
+        public void LoadNames()
         {
             try
             {
-                if (!File.Exists(editProjectsChckBox.Text))
+                if (!File.Exists(editProject))
                 {
                     MessageBox.Show("Error.");
                 }
                 else
                 {
-                    StreamReader reader = new StreamReader(editProjectsChckBox.Text);
+                    StreamReader reader = new StreamReader(editProject);
                     label11.Text = reader.ReadLine();
                     label12.Text = reader.ReadLine();
                     label14.Text = reader.ReadLine();
@@ -51,6 +51,11 @@ namespace Trello_LikeApp
             catch (FileNotFoundException e) { MessageBox.Show(e.Message); }
             catch (IOException e) { MessageBox.Show(e.Message); }
             catch (Exception e) { MessageBox.Show(e.Message); }
+        }
+
+        public void ChangeFields()
+        {
+
         }
     }
 }

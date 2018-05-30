@@ -5,18 +5,29 @@ namespace Trello_LikeApp
 {
     public partial class Form2 : Form
     {
-        private CheckedListBox editProjectsChckBox;
-        public Form2(CheckedListBox editProjectsChckBox)
+        private string editProject;
+        public Form2(string editProject)
         {
             InitializeComponent();
-            this.editProjectsChckBox = editProjectsChckBox;
+            this.editProject = editProject;
         }
 
         private void loadForm2(object sender, EventArgs e)
         {
+
             LoadProjectsToEdit edit = new LoadProjectsToEdit(label11,
-                editProjectsChckBox,label12, label13, label14, label15);
-            edit.LoadThings();
+                editProject, label12, label13, label14, label15);
+            edit.LoadNames();
+        }
+
+        private void saveProjectButton(object sender, EventArgs e)
+        {
+            /*string pName = pNameTxt.Text;
+            string pManager = pManagerTxt.Text;
+            string shortDesc = shortDescTxt.Text;*/
+
+            Save save = new Save(editProject, pNameTxt.Text, pManagerTxt.Text, shortDescTxt.Text);
+            save.Changes();
         }
     }
 }

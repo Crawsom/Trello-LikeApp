@@ -31,11 +31,11 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.endDateTxt = new System.Windows.Forms.TextBox();
+            this.startDateTxt = new System.Windows.Forms.TextBox();
+            this.shortDescTxt = new System.Windows.Forms.TextBox();
+            this.pManagerTxt = new System.Windows.Forms.TextBox();
+            this.pNameTxt = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -47,6 +47,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.SuspendLayout();
@@ -63,11 +64,12 @@
             // 
             // tabPage1
             // 
-            this.tabPage1.Controls.Add(this.textBox5);
-            this.tabPage1.Controls.Add(this.textBox4);
-            this.tabPage1.Controls.Add(this.textBox3);
-            this.tabPage1.Controls.Add(this.textBox2);
-            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Controls.Add(this.button1);
+            this.tabPage1.Controls.Add(this.endDateTxt);
+            this.tabPage1.Controls.Add(this.startDateTxt);
+            this.tabPage1.Controls.Add(this.shortDescTxt);
+            this.tabPage1.Controls.Add(this.pManagerTxt);
+            this.tabPage1.Controls.Add(this.pNameTxt);
             this.tabPage1.Controls.Add(this.label15);
             this.tabPage1.Controls.Add(this.label14);
             this.tabPage1.Controls.Add(this.label13);
@@ -86,40 +88,40 @@
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
-            // textBox5
+            // endDateTxt
             // 
-            this.textBox5.Location = new System.Drawing.Point(369, 208);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 39;
+            this.endDateTxt.Location = new System.Drawing.Point(369, 208);
+            this.endDateTxt.Name = "endDateTxt";
+            this.endDateTxt.Size = new System.Drawing.Size(100, 20);
+            this.endDateTxt.TabIndex = 39;
             // 
-            // textBox4
+            // startDateTxt
             // 
-            this.textBox4.Location = new System.Drawing.Point(369, 176);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 38;
+            this.startDateTxt.Location = new System.Drawing.Point(369, 176);
+            this.startDateTxt.Name = "startDateTxt";
+            this.startDateTxt.Size = new System.Drawing.Size(100, 20);
+            this.startDateTxt.TabIndex = 38;
             // 
-            // textBox3
+            // shortDescTxt
             // 
-            this.textBox3.Location = new System.Drawing.Point(369, 145);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 37;
+            this.shortDescTxt.Location = new System.Drawing.Point(369, 145);
+            this.shortDescTxt.Name = "shortDescTxt";
+            this.shortDescTxt.Size = new System.Drawing.Size(100, 20);
+            this.shortDescTxt.TabIndex = 37;
             // 
-            // textBox2
+            // pManagerTxt
             // 
-            this.textBox2.Location = new System.Drawing.Point(369, 118);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 36;
+            this.pManagerTxt.Location = new System.Drawing.Point(369, 118);
+            this.pManagerTxt.Name = "pManagerTxt";
+            this.pManagerTxt.Size = new System.Drawing.Size(100, 20);
+            this.pManagerTxt.TabIndex = 36;
             // 
-            // textBox1
+            // pNameTxt
             // 
-            this.textBox1.Location = new System.Drawing.Point(369, 89);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 35;
+            this.pNameTxt.Location = new System.Drawing.Point(369, 89);
+            this.pNameTxt.Name = "pNameTxt";
+            this.pNameTxt.Size = new System.Drawing.Size(100, 20);
+            this.pNameTxt.TabIndex = 35;
             // 
             // label15
             // 
@@ -220,6 +222,16 @@
             this.tabPage2.Text = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(394, 332);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 40;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.saveProjectButton);
+            // 
             // Form2
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -240,11 +252,11 @@
 
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox endDateTxt;
+        private System.Windows.Forms.TextBox startDateTxt;
+        private System.Windows.Forms.TextBox shortDescTxt;
+        private System.Windows.Forms.TextBox pManagerTxt;
+        private System.Windows.Forms.TextBox pNameTxt;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label13;
@@ -256,5 +268,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TabPage tabPage2;
+        private System.Windows.Forms.Button button1;
     }
 }

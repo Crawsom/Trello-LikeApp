@@ -140,7 +140,8 @@ namespace Trello_LikeApp
 
         private void loadPrEdit(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(editProjectsChckBox);
+            string editProject = editProjectsChckBox.Text;
+            Form2 form2 = new Form2(editProject);
             form2.ShowDialog();
         }
     }

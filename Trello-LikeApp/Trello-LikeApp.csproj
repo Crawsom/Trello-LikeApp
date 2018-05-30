@@ -66,6 +66,7 @@
     <Compile Include="LoadProjectsToEdit.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Save.cs" />
     <Compile Include="SaveCreatedProject.cs" />
     <Compile Include="SeeDeadLines.cs" />
     <Compile Include="SubTasks.cs" />
