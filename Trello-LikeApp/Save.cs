@@ -9,6 +9,7 @@ namespace Trello_LikeApp
         private string pManager;
         private string shortDesc;
         private string editProject;
+
         public Save(string pName, string pManager, string shortDesc, 
             string editProject)
         {
@@ -36,6 +37,10 @@ namespace Trello_LikeApp
                 else if (line.StartsWith("Short Description"))
                 {
                     writer.WriteLine(shortDesc);
+                }
+                else
+                {
+                    Console.WriteLine("error");
                 }
                 reader.Close();
                 writer.Close();

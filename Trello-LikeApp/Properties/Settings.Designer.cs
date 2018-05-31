@@ -26,5 +26,7 @@ namespace Trello_LikeApp.Properties
                 return defaultInstance;
             }
         }
+
+        public string Langue { get; internal set; }
     }
 }

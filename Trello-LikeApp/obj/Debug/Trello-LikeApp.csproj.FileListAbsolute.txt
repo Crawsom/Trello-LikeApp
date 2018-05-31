@@ -19,3 +19,15 @@ C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello-LikeApp.c
 C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello-LikeApp.exe
 C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello-LikeApp.pdb
 C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello_LikeApp.Form2.resources
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\bin\Debug\es\Trello-LikeApp.resources.dll
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello_LikeApp.Form1.es.resources
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\es\Trello-LikeApp.resources.dll
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\bin\Debug\en\Trello-LikeApp.resources.dll
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello_LikeApp.Form1.en.resources
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\en\Trello-LikeApp.resources.dll
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\bin\Debug\af-ZA\Trello-LikeApp.resources.dll
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\bin\Debug\af\Trello-LikeApp.resources.dll
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello_LikeApp.Form1.af-ZA.resources
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\Trello_LikeApp.Form1.af.resources
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\af-ZA\Trello-LikeApp.resources.dll
+C:\Users\Craw\Documents\Trello-LikeApp\Trello-LikeApp\obj\Debug\af\Trello-LikeApp.resources.dll

@@ -22,11 +22,11 @@ namespace Trello_LikeApp
 
         private void saveProjectButton(object sender, EventArgs e)
         {
-            /*string pName = pNameTxt.Text;
+            string pName = pNameTxt.Text;
             string pManager = pManagerTxt.Text;
-            string shortDesc = shortDescTxt.Text;*/
+            string shortDesc = shortDescTxt.Text;
 
-            Save save = new Save(editProject, pNameTxt.Text, pManagerTxt.Text, shortDescTxt.Text);
+            Save save = new Save( pName, pManager, shortDesc, editProject);
             save.Changes();
         }
     }

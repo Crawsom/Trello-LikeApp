@@ -32,30 +32,27 @@ namespace Trello_LikeApp
         {
             try
             {
+                StreamReader reader = new StreamReader(editProject);
+
                 if (!File.Exists(editProject))
                 {
                     MessageBox.Show("Error.");
                 }
                 else
                 {
-                    StreamReader reader = new StreamReader(editProject);
                     label11.Text = reader.ReadLine();
                     label12.Text = reader.ReadLine();
                     label14.Text = reader.ReadLine();
                     label13.Text = reader.ReadLine();
                     label15.Text = reader.ReadLine();
-                    reader.Close();
                 }
+                reader.Close();
+
             }
             catch (PathTooLongException e) { MessageBox.Show(e.Message); }
             catch (FileNotFoundException e) { MessageBox.Show(e.Message); }
             catch (IOException e) { MessageBox.Show(e.Message); }
             catch (Exception e) { MessageBox.Show(e.Message); }
-        }
-
-        public void ChangeFields()
-        {
-
         }
     }
 }

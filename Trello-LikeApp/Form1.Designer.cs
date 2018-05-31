@@ -60,6 +60,9 @@
             this.SbTaskName = new System.Windows.Forms.Label();
             this.txtSTName = new System.Windows.Forms.TextBox();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.loadPrEditor = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.editProjectsChckBox = new System.Windows.Forms.CheckedListBox();
             this.DeadLinesTab = new System.Windows.Forms.TabPage();
             this.ProjectsNearDeadLinelstbx = new System.Windows.Forms.ListBox();
             this.projectListLbl = new System.Windows.Forms.Label();
@@ -67,6 +70,10 @@
             this.Employee = new System.Windows.Forms.TabPage();
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabRegisterEmployee = new System.Windows.Forms.TabPage();
+            this.label13 = new System.Windows.Forms.Label();
+            this.dniTxtBx = new System.Windows.Forms.TextBox();
+            this.ageTxtBx = new System.Windows.Forms.TextBox();
+            this.label12 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.lstBoxEmployees = new System.Windows.Forms.ListBox();
             this.SaveEmployeeButton = new System.Windows.Forms.Button();
@@ -77,13 +84,7 @@
             this.Clock = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.editProjectsChckBox = new System.Windows.Forms.CheckedListBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.loadPrEditor = new System.Windows.Forms.Button();
-            this.label12 = new System.Windows.Forms.Label();
-            this.ageTxtBx = new System.Windows.Forms.TextBox();
-            this.dniTxtBx = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
+            this.languageCmbBx = new System.Windows.Forms.ComboBox();
             this.TbCntrl.SuspendLayout();
             this.AddJbTB.SuspendLayout();
             this.tabControl1.SuspendLayout();
@@ -99,40 +100,36 @@
             // 
             // TbCntrl
             // 
+            resources.ApplyResources(this.TbCntrl, "TbCntrl");
             this.TbCntrl.Controls.Add(this.AddJbTB);
             this.TbCntrl.Controls.Add(this.DeadLinesTab);
             this.TbCntrl.Controls.Add(this.Employee);
-            this.TbCntrl.Location = new System.Drawing.Point(2, 12);
             this.TbCntrl.Name = "TbCntrl";
             this.TbCntrl.SelectedIndex = 0;
-            this.TbCntrl.Size = new System.Drawing.Size(478, 406);
-            this.TbCntrl.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.TbCntrl, resources.GetString("TbCntrl.ToolTip"));
             // 
             // AddJbTB
             // 
+            resources.ApplyResources(this.AddJbTB, "AddJbTB");
             this.AddJbTB.Controls.Add(this.tabControl1);
-            this.AddJbTB.Location = new System.Drawing.Point(4, 22);
             this.AddJbTB.Name = "AddJbTB";
-            this.AddJbTB.Padding = new System.Windows.Forms.Padding(3);
-            this.AddJbTB.Size = new System.Drawing.Size(470, 380);
-            this.AddJbTB.TabIndex = 0;
-            this.AddJbTB.Text = "Create Project";
+            this.toolTip1.SetToolTip(this.AddJbTB, resources.GetString("AddJbTB.ToolTip"));
             this.AddJbTB.UseVisualStyleBackColor = true;
             // 
             // tabControl1
             // 
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage4);
             this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(-4, 0);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(479, 380);
-            this.tabControl1.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.tabControl1, resources.GetString("tabControl1.ToolTip"));
             this.tabControl1.Enter += new System.EventHandler(this.ProjectsLoad);
             // 
             // tabPage1
             // 
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.label5);
             this.tabPage1.Controls.Add(this.EndTimeDate);
             this.tabPage1.Controls.Add(this.label4);
@@ -144,106 +141,81 @@
             this.tabPage1.Controls.Add(this.label1);
             this.tabPage1.Controls.Add(this.label2);
             this.tabPage1.Controls.Add(this.ProjectNameTextBx);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(471, 354);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "Add Project";
+            this.toolTip1.SetToolTip(this.tabPage1, resources.GetString("tabPage1.ToolTip"));
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(348, 170);
+            resources.ApplyResources(this.label5, "label5");
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(52, 13);
-            this.label5.TabIndex = 17;
-            this.label5.Text = "End Date";
+            this.toolTip1.SetToolTip(this.label5, resources.GetString("label5.ToolTip"));
             // 
             // EndTimeDate
             // 
-            this.EndTimeDate.Location = new System.Drawing.Point(250, 186);
+            resources.ApplyResources(this.EndTimeDate, "EndTimeDate");
             this.EndTimeDate.Name = "EndTimeDate";
-            this.EndTimeDate.Size = new System.Drawing.Size(215, 20);
-            this.EndTimeDate.TabIndex = 16;
+            this.toolTip1.SetToolTip(this.EndTimeDate, resources.GetString("EndTimeDate.ToolTip"));
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(70, 170);
+            resources.ApplyResources(this.label4, "label4");
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Start Date";
+            this.toolTip1.SetToolTip(this.label4, resources.GetString("label4.ToolTip"));
             // 
             // StartTimeDate
             // 
-            this.StartTimeDate.Location = new System.Drawing.Point(6, 186);
+            resources.ApplyResources(this.StartTimeDate, "StartTimeDate");
             this.StartTimeDate.Name = "StartTimeDate";
-            this.StartTimeDate.Size = new System.Drawing.Size(214, 20);
-            this.StartTimeDate.TabIndex = 14;
+            this.toolTip1.SetToolTip(this.StartTimeDate, resources.GetString("StartTimeDate.ToolTip"));
             // 
             // save_button
             // 
-            this.save_button.Location = new System.Drawing.Point(377, 315);
+            resources.ApplyResources(this.save_button, "save_button");
             this.save_button.Name = "save_button";
-            this.save_button.Size = new System.Drawing.Size(75, 23);
-            this.save_button.TabIndex = 13;
-            this.save_button.Text = "Save";
+            this.toolTip1.SetToolTip(this.save_button, resources.GetString("save_button.ToolTip"));
             this.save_button.UseVisualStyleBackColor = true;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // ShortDescTextBx
             // 
-            this.ShortDescTextBx.Location = new System.Drawing.Point(227, 105);
+            resources.ApplyResources(this.ShortDescTextBx, "ShortDescTextBx");
             this.ShortDescTextBx.Name = "ShortDescTextBx";
-            this.ShortDescTextBx.Size = new System.Drawing.Size(120, 20);
-            this.ShortDescTextBx.TabIndex = 12;
+            this.toolTip1.SetToolTip(this.ShortDescTextBx, resources.GetString("ShortDescTextBx.ToolTip"));
             // 
             // label3
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(130, 108);
+            resources.ApplyResources(this.label3, "label3");
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(91, 13);
-            this.label3.TabIndex = 11;
-            this.label3.Text = "Short Description:";
+            this.toolTip1.SetToolTip(this.label3, resources.GetString("label3.ToolTip"));
             // 
             // ProjectManagerTextBx
             // 
-            this.ProjectManagerTextBx.Location = new System.Drawing.Point(227, 71);
+            resources.ApplyResources(this.ProjectManagerTextBx, "ProjectManagerTextBx");
             this.ProjectManagerTextBx.Name = "ProjectManagerTextBx";
-            this.ProjectManagerTextBx.Size = new System.Drawing.Size(120, 20);
-            this.ProjectManagerTextBx.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.ProjectManagerTextBx, resources.GetString("ProjectManagerTextBx.ToolTip"));
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(133, 74);
+            resources.ApplyResources(this.label1, "label1");
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(88, 13);
-            this.label1.TabIndex = 9;
-            this.label1.Text = "Project Manager:";
+            this.toolTip1.SetToolTip(this.label1, resources.GetString("label1.ToolTip"));
             // 
             // label2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(147, 42);
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 13);
-            this.label2.TabIndex = 8;
-            this.label2.Text = "Project Name:";
+            this.toolTip1.SetToolTip(this.label2, resources.GetString("label2.ToolTip"));
             // 
             // ProjectNameTextBx
             // 
-            this.ProjectNameTextBx.Location = new System.Drawing.Point(227, 39);
+            resources.ApplyResources(this.ProjectNameTextBx, "ProjectNameTextBx");
             this.ProjectNameTextBx.Name = "ProjectNameTextBx";
-            this.ProjectNameTextBx.Size = new System.Drawing.Size(120, 20);
-            this.ProjectNameTextBx.TabIndex = 7;
+            this.toolTip1.SetToolTip(this.ProjectNameTextBx, resources.GetString("ProjectNameTextBx.ToolTip"));
             // 
             // tabPage4
             // 
+            resources.ApplyResources(this.tabPage4, "tabPage4");
             this.tabPage4.Controls.Add(this.TaskPriority);
             this.tabPage4.Controls.Add(this.label10);
             this.tabPage4.Controls.Add(this.txtBxSTDuration);
@@ -257,200 +229,177 @@
             this.tabPage4.Controls.Add(this.label7);
             this.tabPage4.Controls.Add(this.SbTaskName);
             this.tabPage4.Controls.Add(this.txtSTName);
-            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(458, 354);
-            this.tabPage4.TabIndex = 1;
-            this.tabPage4.Text = "Add Sub Tasks";
+            this.toolTip1.SetToolTip(this.tabPage4, resources.GetString("tabPage4.ToolTip"));
             this.tabPage4.UseVisualStyleBackColor = true;
             // 
             // TaskPriority
             // 
-            this.TaskPriority.Location = new System.Drawing.Point(332, 230);
+            resources.ApplyResources(this.TaskPriority, "TaskPriority");
             this.TaskPriority.Maximum = new decimal(new int[] {
             10,
             0,
             0,
             0});
             this.TaskPriority.Name = "TaskPriority";
-            this.TaskPriority.Size = new System.Drawing.Size(120, 20);
-            this.TaskPriority.TabIndex = 26;
+            this.toolTip1.SetToolTip(this.TaskPriority, resources.GetString("TaskPriority.ToolTip"));
             // 
             // label10
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(232, 232);
+            resources.ApplyResources(this.label10, "label10");
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(90, 13);
-            this.label10.TabIndex = 25;
-            this.label10.Text = "Sub Task Priority:";
+            this.toolTip1.SetToolTip(this.label10, resources.GetString("label10.ToolTip"));
             // 
             // txtBxSTDuration
             // 
-            this.txtBxSTDuration.Location = new System.Drawing.Point(332, 196);
+            resources.ApplyResources(this.txtBxSTDuration, "txtBxSTDuration");
             this.txtBxSTDuration.Name = "txtBxSTDuration";
-            this.txtBxSTDuration.Size = new System.Drawing.Size(121, 20);
-            this.txtBxSTDuration.TabIndex = 24;
+            this.toolTip1.SetToolTip(this.txtBxSTDuration, resources.GetString("txtBxSTDuration.ToolTip"));
             // 
             // label9
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(226, 199);
+            resources.ApplyResources(this.label9, "label9");
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(96, 13);
-            this.label9.TabIndex = 23;
-            this.label9.Text = "SubTask Duration:";
+            this.toolTip1.SetToolTip(this.label9, resources.GetString("label9.ToolTip"));
             // 
             // btnSubTasks
             // 
-            this.btnSubTasks.Location = new System.Drawing.Point(377, 315);
+            resources.ApplyResources(this.btnSubTasks, "btnSubTasks");
             this.btnSubTasks.Name = "btnSubTasks";
-            this.btnSubTasks.Size = new System.Drawing.Size(75, 23);
-            this.btnSubTasks.TabIndex = 22;
-            this.btnSubTasks.Text = "Save";
+            this.toolTip1.SetToolTip(this.btnSubTasks, resources.GetString("btnSubTasks.ToolTip"));
             this.btnSubTasks.UseVisualStyleBackColor = true;
             this.btnSubTasks.Click += new System.EventHandler(this.SaveSubTasks);
             // 
             // lblProjects
             // 
-            this.lblProjects.AutoSize = true;
-            this.lblProjects.Location = new System.Drawing.Point(86, 96);
+            resources.ApplyResources(this.lblProjects, "lblProjects");
             this.lblProjects.Name = "lblProjects";
-            this.lblProjects.Size = new System.Drawing.Size(45, 13);
-            this.lblProjects.TabIndex = 21;
-            this.lblProjects.Text = "Projects";
+            this.toolTip1.SetToolTip(this.lblProjects, resources.GetString("lblProjects.ToolTip"));
             // 
             // lstBxProjects
             // 
+            resources.ApplyResources(this.lstBxProjects, "lstBxProjects");
             this.lstBxProjects.FormattingEnabled = true;
-            this.lstBxProjects.Location = new System.Drawing.Point(16, 120);
             this.lstBxProjects.Name = "lstBxProjects";
-            this.lstBxProjects.Size = new System.Drawing.Size(177, 109);
-            this.lstBxProjects.TabIndex = 20;
+            this.toolTip1.SetToolTip(this.lstBxProjects, resources.GetString("lstBxProjects.ToolTip"));
             this.lstBxProjects.SelectedIndexChanged += new System.EventHandler(this.lstBxProjects_SelectedIndexChanged);
             // 
             // bxEmployeers
             // 
+            resources.ApplyResources(this.bxEmployeers, "bxEmployeers");
             this.bxEmployeers.FormattingEnabled = true;
-            this.bxEmployeers.Location = new System.Drawing.Point(332, 128);
             this.bxEmployeers.Name = "bxEmployeers";
-            this.bxEmployeers.Size = new System.Drawing.Size(121, 21);
-            this.bxEmployeers.TabIndex = 19;
+            this.toolTip1.SetToolTip(this.bxEmployeers, resources.GetString("bxEmployeers.ToolTip"));
             // 
             // txtSTDescription
             // 
-            this.txtSTDescription.Location = new System.Drawing.Point(332, 162);
+            resources.ApplyResources(this.txtSTDescription, "txtSTDescription");
             this.txtSTDescription.Name = "txtSTDescription";
-            this.txtSTDescription.Size = new System.Drawing.Size(121, 20);
-            this.txtSTDescription.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.txtSTDescription, resources.GetString("txtSTDescription.ToolTip"));
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(231, 165);
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(91, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "Short Description:";
+            this.toolTip1.SetToolTip(this.label6, resources.GetString("label6.ToolTip"));
             // 
             // label7
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(220, 131);
+            resources.ApplyResources(this.label7, "label7");
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(106, 13);
-            this.label7.TabIndex = 15;
-            this.label7.Text = "Employee in charge: ";
+            this.toolTip1.SetToolTip(this.label7, resources.GetString("label7.ToolTip"));
             // 
             // SbTaskName
             // 
-            this.SbTaskName.AutoSize = true;
-            this.SbTaskName.Location = new System.Drawing.Point(235, 99);
+            resources.ApplyResources(this.SbTaskName, "SbTaskName");
             this.SbTaskName.Name = "SbTaskName";
-            this.SbTaskName.Size = new System.Drawing.Size(87, 13);
-            this.SbTaskName.TabIndex = 14;
-            this.SbTaskName.Text = "Sub Task Name:";
+            this.toolTip1.SetToolTip(this.SbTaskName, resources.GetString("SbTaskName.ToolTip"));
             // 
             // txtSTName
             // 
-            this.txtSTName.Location = new System.Drawing.Point(332, 96);
+            resources.ApplyResources(this.txtSTName, "txtSTName");
             this.txtSTName.Name = "txtSTName";
-            this.txtSTName.Size = new System.Drawing.Size(121, 20);
-            this.txtSTName.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.txtSTName, resources.GetString("txtSTName.ToolTip"));
             // 
             // tabPage2
             // 
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.loadPrEditor);
             this.tabPage2.Controls.Add(this.label11);
             this.tabPage2.Controls.Add(this.editProjectsChckBox);
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(471, 354);
-            this.tabPage2.TabIndex = 2;
-            this.tabPage2.Text = "Edit Projects";
+            this.toolTip1.SetToolTip(this.tabPage2, resources.GetString("tabPage2.ToolTip"));
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // loadPrEditor
+            // 
+            resources.ApplyResources(this.loadPrEditor, "loadPrEditor");
+            this.loadPrEditor.Name = "loadPrEditor";
+            this.toolTip1.SetToolTip(this.loadPrEditor, resources.GetString("loadPrEditor.ToolTip"));
+            this.loadPrEditor.UseVisualStyleBackColor = true;
+            this.loadPrEditor.Click += new System.EventHandler(this.loadPrEdit);
+            // 
+            // label11
+            // 
+            resources.ApplyResources(this.label11, "label11");
+            this.label11.Name = "label11";
+            this.toolTip1.SetToolTip(this.label11, resources.GetString("label11.ToolTip"));
+            // 
+            // editProjectsChckBox
+            // 
+            resources.ApplyResources(this.editProjectsChckBox, "editProjectsChckBox");
+            this.editProjectsChckBox.FormattingEnabled = true;
+            this.editProjectsChckBox.Name = "editProjectsChckBox";
+            this.toolTip1.SetToolTip(this.editProjectsChckBox, resources.GetString("editProjectsChckBox.ToolTip"));
             // 
             // DeadLinesTab
             // 
+            resources.ApplyResources(this.DeadLinesTab, "DeadLinesTab");
             this.DeadLinesTab.Controls.Add(this.ProjectsNearDeadLinelstbx);
             this.DeadLinesTab.Controls.Add(this.projectListLbl);
             this.DeadLinesTab.Controls.Add(this.DeadLinesCalendar);
-            this.DeadLinesTab.Location = new System.Drawing.Point(4, 22);
             this.DeadLinesTab.Name = "DeadLinesTab";
-            this.DeadLinesTab.Padding = new System.Windows.Forms.Padding(3);
-            this.DeadLinesTab.Size = new System.Drawing.Size(470, 380);
-            this.DeadLinesTab.TabIndex = 1;
-            this.DeadLinesTab.Text = "Dead Lines";
+            this.toolTip1.SetToolTip(this.DeadLinesTab, resources.GetString("DeadLinesTab.ToolTip"));
             this.DeadLinesTab.UseVisualStyleBackColor = true;
             // 
             // ProjectsNearDeadLinelstbx
             // 
+            resources.ApplyResources(this.ProjectsNearDeadLinelstbx, "ProjectsNearDeadLinelstbx");
             this.ProjectsNearDeadLinelstbx.FormattingEnabled = true;
-            this.ProjectsNearDeadLinelstbx.Location = new System.Drawing.Point(32, 204);
             this.ProjectsNearDeadLinelstbx.Name = "ProjectsNearDeadLinelstbx";
-            this.ProjectsNearDeadLinelstbx.Size = new System.Drawing.Size(385, 108);
-            this.ProjectsNearDeadLinelstbx.TabIndex = 3;
+            this.toolTip1.SetToolTip(this.ProjectsNearDeadLinelstbx, resources.GetString("ProjectsNearDeadLinelstbx.ToolTip"));
             // 
             // projectListLbl
             // 
-            this.projectListLbl.AutoSize = true;
-            this.projectListLbl.Location = new System.Drawing.Point(29, 187);
+            resources.ApplyResources(this.projectListLbl, "projectListLbl");
             this.projectListLbl.Name = "projectListLbl";
-            this.projectListLbl.Size = new System.Drawing.Size(123, 13);
-            this.projectListLbl.TabIndex = 2;
-            this.projectListLbl.Text = "Projects Near Dead Line";
+            this.toolTip1.SetToolTip(this.projectListLbl, resources.GetString("projectListLbl.ToolTip"));
             // 
             // DeadLinesCalendar
             // 
-            this.DeadLinesCalendar.CalendarDimensions = new System.Drawing.Size(2, 1);
-            this.DeadLinesCalendar.Location = new System.Drawing.Point(29, 9);
+            resources.ApplyResources(this.DeadLinesCalendar, "DeadLinesCalendar");
             this.DeadLinesCalendar.Name = "DeadLinesCalendar";
-            this.DeadLinesCalendar.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.DeadLinesCalendar, resources.GetString("DeadLinesCalendar.ToolTip"));
             // 
             // Employee
             // 
+            resources.ApplyResources(this.Employee, "Employee");
             this.Employee.Controls.Add(this.tabControl2);
-            this.Employee.Location = new System.Drawing.Point(4, 22);
             this.Employee.Name = "Employee";
-            this.Employee.Padding = new System.Windows.Forms.Padding(3);
-            this.Employee.Size = new System.Drawing.Size(470, 380);
-            this.Employee.TabIndex = 2;
-            this.Employee.Text = "Employees";
+            this.toolTip1.SetToolTip(this.Employee, resources.GetString("Employee.ToolTip"));
             this.Employee.UseVisualStyleBackColor = true;
             // 
             // tabControl2
             // 
+            resources.ApplyResources(this.tabControl2, "tabControl2");
             this.tabControl2.Controls.Add(this.tabRegisterEmployee);
-            this.tabControl2.Location = new System.Drawing.Point(-4, 0);
             this.tabControl2.Name = "tabControl2";
             this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(478, 406);
-            this.tabControl2.TabIndex = 0;
+            this.toolTip1.SetToolTip(this.tabControl2, resources.GetString("tabControl2.ToolTip"));
             // 
             // tabRegisterEmployee
             // 
+            resources.ApplyResources(this.tabRegisterEmployee, "tabRegisterEmployee");
             this.tabRegisterEmployee.Controls.Add(this.label13);
             this.tabRegisterEmployee.Controls.Add(this.dniTxtBx);
             this.tabRegisterEmployee.Controls.Add(this.ageTxtBx);
@@ -462,156 +411,107 @@
             this.tabRegisterEmployee.Controls.Add(this.TxtBxEmployeeName);
             this.tabRegisterEmployee.Controls.Add(this.EmployeeSurname);
             this.tabRegisterEmployee.Controls.Add(this.EmployeeName);
-            this.tabRegisterEmployee.Location = new System.Drawing.Point(4, 22);
             this.tabRegisterEmployee.Name = "tabRegisterEmployee";
-            this.tabRegisterEmployee.Padding = new System.Windows.Forms.Padding(3);
-            this.tabRegisterEmployee.Size = new System.Drawing.Size(470, 380);
-            this.tabRegisterEmployee.TabIndex = 0;
-            this.tabRegisterEmployee.Text = "Register Employee";
+            this.toolTip1.SetToolTip(this.tabRegisterEmployee, resources.GetString("tabRegisterEmployee.ToolTip"));
             this.tabRegisterEmployee.UseVisualStyleBackColor = true;
+            // 
+            // label13
+            // 
+            resources.ApplyResources(this.label13, "label13");
+            this.label13.Name = "label13";
+            this.toolTip1.SetToolTip(this.label13, resources.GetString("label13.ToolTip"));
+            // 
+            // dniTxtBx
+            // 
+            resources.ApplyResources(this.dniTxtBx, "dniTxtBx");
+            this.dniTxtBx.Name = "dniTxtBx";
+            this.toolTip1.SetToolTip(this.dniTxtBx, resources.GetString("dniTxtBx.ToolTip"));
+            // 
+            // ageTxtBx
+            // 
+            resources.ApplyResources(this.ageTxtBx, "ageTxtBx");
+            this.ageTxtBx.Name = "ageTxtBx";
+            this.toolTip1.SetToolTip(this.ageTxtBx, resources.GetString("ageTxtBx.ToolTip"));
+            // 
+            // label12
+            // 
+            resources.ApplyResources(this.label12, "label12");
+            this.label12.Name = "label12";
+            this.toolTip1.SetToolTip(this.label12, resources.GetString("label12.ToolTip"));
             // 
             // label8
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(7, 168);
+            resources.ApplyResources(this.label8, "label8");
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(58, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Employees";
+            this.toolTip1.SetToolTip(this.label8, resources.GetString("label8.ToolTip"));
             // 
             // lstBoxEmployees
             // 
+            resources.ApplyResources(this.lstBoxEmployees, "lstBoxEmployees");
             this.lstBoxEmployees.FormattingEnabled = true;
-            this.lstBoxEmployees.Location = new System.Drawing.Point(10, 194);
             this.lstBoxEmployees.Name = "lstBoxEmployees";
-            this.lstBoxEmployees.Size = new System.Drawing.Size(457, 95);
-            this.lstBoxEmployees.TabIndex = 13;
+            this.toolTip1.SetToolTip(this.lstBoxEmployees, resources.GetString("lstBoxEmployees.ToolTip"));
             // 
             // SaveEmployeeButton
             // 
-            this.SaveEmployeeButton.Location = new System.Drawing.Point(377, 315);
+            resources.ApplyResources(this.SaveEmployeeButton, "SaveEmployeeButton");
             this.SaveEmployeeButton.Name = "SaveEmployeeButton";
-            this.SaveEmployeeButton.Size = new System.Drawing.Size(75, 23);
-            this.SaveEmployeeButton.TabIndex = 12;
-            this.SaveEmployeeButton.Text = "Save";
+            this.toolTip1.SetToolTip(this.SaveEmployeeButton, resources.GetString("SaveEmployeeButton.ToolTip"));
             this.SaveEmployeeButton.UseVisualStyleBackColor = true;
             this.SaveEmployeeButton.Click += new System.EventHandler(this.SaveEmployees);
             // 
             // TxtBxEmployeeSurname
             // 
-            this.TxtBxEmployeeSurname.Location = new System.Drawing.Point(227, 66);
+            resources.ApplyResources(this.TxtBxEmployeeSurname, "TxtBxEmployeeSurname");
             this.TxtBxEmployeeSurname.Name = "TxtBxEmployeeSurname";
-            this.TxtBxEmployeeSurname.Size = new System.Drawing.Size(100, 20);
-            this.TxtBxEmployeeSurname.TabIndex = 10;
+            this.toolTip1.SetToolTip(this.TxtBxEmployeeSurname, resources.GetString("TxtBxEmployeeSurname.ToolTip"));
             // 
             // TxtBxEmployeeName
             // 
-            this.TxtBxEmployeeName.Location = new System.Drawing.Point(227, 40);
+            resources.ApplyResources(this.TxtBxEmployeeName, "TxtBxEmployeeName");
             this.TxtBxEmployeeName.Name = "TxtBxEmployeeName";
-            this.TxtBxEmployeeName.Size = new System.Drawing.Size(100, 20);
-            this.TxtBxEmployeeName.TabIndex = 9;
+            this.toolTip1.SetToolTip(this.TxtBxEmployeeName, resources.GetString("TxtBxEmployeeName.ToolTip"));
             // 
             // EmployeeSurname
             // 
-            this.EmployeeSurname.AutoSize = true;
-            this.EmployeeSurname.Location = new System.Drawing.Point(125, 69);
+            resources.ApplyResources(this.EmployeeSurname, "EmployeeSurname");
             this.EmployeeSurname.Name = "EmployeeSurname";
-            this.EmployeeSurname.Size = new System.Drawing.Size(52, 13);
-            this.EmployeeSurname.TabIndex = 7;
-            this.EmployeeSurname.Text = "Surname:";
+            this.toolTip1.SetToolTip(this.EmployeeSurname, resources.GetString("EmployeeSurname.ToolTip"));
             // 
             // EmployeeName
             // 
-            this.EmployeeName.AutoSize = true;
-            this.EmployeeName.Location = new System.Drawing.Point(139, 40);
+            resources.ApplyResources(this.EmployeeName, "EmployeeName");
             this.EmployeeName.Name = "EmployeeName";
-            this.EmployeeName.Size = new System.Drawing.Size(38, 13);
-            this.EmployeeName.TabIndex = 6;
-            this.EmployeeName.Text = "Name:";
+            this.toolTip1.SetToolTip(this.EmployeeName, resources.GetString("EmployeeName.ToolTip"));
             // 
             // Clock
             // 
-            this.Clock.AutoSize = true;
-            this.Clock.Location = new System.Drawing.Point(432, 9);
+            resources.ApplyResources(this.Clock, "Clock");
             this.Clock.Name = "Clock";
-            this.Clock.Size = new System.Drawing.Size(0, 13);
-            this.Clock.TabIndex = 18;
+            this.toolTip1.SetToolTip(this.Clock, resources.GetString("Clock.ToolTip"));
             // 
             // timer1
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer);
             // 
-            // editProjectsChckBox
+            // languageCmbBx
             // 
-            this.editProjectsChckBox.FormattingEnabled = true;
-            this.editProjectsChckBox.Location = new System.Drawing.Point(40, 32);
-            this.editProjectsChckBox.Name = "editProjectsChckBox";
-            this.editProjectsChckBox.Size = new System.Drawing.Size(386, 229);
-            this.editProjectsChckBox.TabIndex = 0;
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(183, 16);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(77, 13);
-            this.label11.TabIndex = 1;
-            this.label11.Text = "Projects to edit";
-            // 
-            // loadPrEditor
-            // 
-            this.loadPrEditor.Location = new System.Drawing.Point(377, 315);
-            this.loadPrEditor.Name = "loadPrEditor";
-            this.loadPrEditor.Size = new System.Drawing.Size(75, 23);
-            this.loadPrEditor.TabIndex = 2;
-            this.loadPrEditor.Text = "Load";
-            this.loadPrEditor.UseVisualStyleBackColor = true;
-            this.loadPrEditor.Click += new System.EventHandler(this.loadPrEdit);
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(148, 97);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(29, 13);
-            this.label12.TabIndex = 25;
-            this.label12.Text = "Age:";
-            // 
-            // ageTxtBx
-            // 
-            this.ageTxtBx.Location = new System.Drawing.Point(227, 94);
-            this.ageTxtBx.Name = "ageTxtBx";
-            this.ageTxtBx.Size = new System.Drawing.Size(100, 20);
-            this.ageTxtBx.TabIndex = 26;
-            // 
-            // dniTxtBx
-            // 
-            this.dniTxtBx.Location = new System.Drawing.Point(227, 121);
-            this.dniTxtBx.Name = "dniTxtBx";
-            this.dniTxtBx.Size = new System.Drawing.Size(100, 20);
-            this.dniTxtBx.TabIndex = 27;
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(148, 124);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(29, 13);
-            this.label13.TabIndex = 28;
-            this.label13.Text = "DNI:";
+            resources.ApplyResources(this.languageCmbBx, "languageCmbBx");
+            this.languageCmbBx.FormattingEnabled = true;
+            this.languageCmbBx.Name = "languageCmbBx";
+            this.toolTip1.SetToolTip(this.languageCmbBx, resources.GetString("languageCmbBx.ToolTip"));
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(480, 418);
+            this.Controls.Add(this.languageCmbBx);
             this.Controls.Add(this.Clock);
             this.Controls.Add(this.TbCntrl);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
-            this.Text = "Trello-Like App";
+            this.toolTip1.SetToolTip(this, resources.GetString("$this.ToolTip"));
             this.Load += new System.EventHandler(this.loadForm);
             this.TbCntrl.ResumeLayout(false);
             this.AddJbTB.ResumeLayout(false);
@@ -692,6 +592,7 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.TextBox dniTxtBx;
+        private System.Windows.Forms.ComboBox languageCmbBx;
     }
 }
 

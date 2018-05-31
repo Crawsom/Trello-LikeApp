@@ -2,12 +2,18 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Text.RegularExpressions;
+using System.Globalization;
+using System.Threading;
+using System.ComponentModel;
+
 namespace Trello_LikeApp
 {
     public partial class Form1 : Form
     {
+        public string language = Properties.Settings.Default.Langue;
         public Form1()
         {
+            Thread.CurrentThread.CurrentUICulture = new CultureInfo(language);
             InitializeComponent();
             timer1.Start();
         }
@@ -31,6 +37,7 @@ namespace Trello_LikeApp
 
         private void loadForm(object sender, EventArgs e)
         {
+
             LoadEmployees load = new LoadEmployees();
             foreach (var item in load.Load())
             {
@@ -43,7 +50,8 @@ namespace Trello_LikeApp
             }
 
             //Adds the deadlines of projects to the Calendar tab
-            SeeDeadLines deadLine = new SeeDeadLines(DeadLinesCalendar,ProjectsNearDeadLinelstbx);
+            SeeDeadLines deadLine = new SeeDeadLines(DeadLinesCalendar,
+                ProjectsNearDeadLinelstbx);
             deadLine.DeadLines();
 
             //Shows alert for deadlines that are at one week to end
@@ -53,6 +61,11 @@ namespace Trello_LikeApp
             Extras extra = new Extras(label2, label1, label4, label5,
                 save_button);
             extra.ToolTips();
+
+            //Change Language
+            languageCmbBx.Items.Add("English");
+            languageCmbBx.Items.Add("Spanish");
+            languageCmbBx.SelectedIndex = 0;
         }
 
         private void ProjectsLoad(object sender, EventArgs e)
@@ -143,6 +156,32 @@ namespace Trello_LikeApp
             string editProject = editProjectsChckBox.Text;
             Form2 form2 = new Form2(editProject);
             form2.ShowDialog();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (languageCmbBx.SelectedItem.ToString() == "English")
+            {
+                ChangeLanguage("en");
+            }
+            else if (languageCmbBx.SelectedItem.ToString() == "Spanish")
+            {
+                ChangeLanguage("es");
+            }
+            else
+            {
+                ChangeLanguage("en");
+            }
+        }
+
+        private void ChangeLanguage(string lang)
+        {
+            foreach (Control c in this.Controls)
+            {
+                ComponentResourceManager resources = new
+                    ComponentResourceManager(typeof(Form1));
+                resources.ApplyResources(c, c.Name, new CultureInfo(lang));
+            }
         }
     }
 }
